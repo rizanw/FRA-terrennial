@@ -1,0 +1,268 @@
+
+:root {
+    --biru-tua: #4472C4;
+    --biru-muda: #5B9BD5;
+    --hijau: #76be45;
+    --oranye: #ED7D31;
+    --kuning: #FFC000;
+    --hitam: #231F20;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+body {
+    font-family: 'Karla' !important;
+    font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--hitam);
+    background-color: #ffffff;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+label {
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: var(--hijau);
+    font-weight: bold;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style: none;
+    border-bottom: #231F20 3px solid ;
+}
+
+.navbar-right {
+    float: right !important;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    color: whitesmoke;
+}
+
+.welcome-page {
+    top: 0;
+  min-height: 100vh;
+  margin: 0;
+  background: yellow;
+}
+
+.welcome-container {
+    padding: 5%;
+    text-align: center;
+}
+
+.main-page {
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-left {
+    padding: 5px;
+    /* background-color: #4472C4; */
+    width: 25%;
+    margin-bottom: 20px;
+}
+.container-main {
+    padding: 5px;
+    margin: 0px 12px;
+    /* background-color: #ED7D31; */
+    width: 50%;
+}
+.container-right {
+    padding: 5px;
+    /* background-color: #76be45; */
+    width: 25%;
+}
+
+.post-content {
+    border: black 3px solid;
+    padding: 27px;
+    margin: 0px 0px 30px;
+    border-radius: 10px;
+}
+
+.title-post {
+    margin-top: 0;
+}
+
+.post-content p {
+    font-size: 10pt;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.related-title {
+    padding: 0 27px;
+}
+
+.related-content {
+    padding: 0 27px;
+    margin: 0px 0px 15px;
+}
+
+.related-content p {
+    font-size: 10pt;
+    padding-bottom: 12px;
+    border-bottom: #231F20 3px solid;
+}
+
+.content-left {
+    padding: 0 27px;
+    border: #231F20 3px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.external-content {
+    padding: 0;
+    border: #231F20 3px solid;
+    border-radius: 10px;
+}
+
+.external-title {
+    margin: 0;
+    padding: 27px;    
+    border-bottom: #231F20 3px solid;
+}
+
+.links-group ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.links-group li {
+    padding: 15px 15px 15px 27px;
+    border-bottom: #231F20 3px solid;
+}
+
+.logo-animate a {
+    display: inline-block;
+    position: absolute;
+    top: 50%; left: 50%;
+
+}
+
+.animated-icon {
+    background-image: url(https://climate.nasa.gov/assets/globe_with_satellites.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.show-more {
+    display: inline-block;
+    position: absolute;
+    top: 92%; left: 50%;
+}
+
+.arrow-up {
+    /* background-image: url(/assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center; */
+    width: 50px;
+    height: 50px;
+    display: block;
+    fill: #fff;
+}
+
+.arrow-up svg{
+    fill : whitesmoke;
+}
+
+footer {
+    background-color: var(--biru-tua);
+    text-align: center;
+    border-top: #231F20 3px solid;
+}   
+
+footer label {
+    font-size: 14pt;
+    color: #fff;
+}
+
+input[type=email] {
+    box-sizing: border-box;
+    padding: 3px 15px;
+    margin: 8px 0;
+    position: relative;
+    outline: none;
+    border: #231F20 3px solid;
+    border-radius: 5px;
+    min-width: 400px;
+    min-height: 50px;
+    font-size: 12pt;
+}
+
+input[type=submit] {
+    box-sizing: border-box;
+    padding: 3px 10px;
+    margin: 8px 5px;
+    position: relative;
+    outline: none;
+    border: #231F20 3px solid;
+    border-radius: 5px;
+    background-color: #ED7D31;
+    min-width: 80px;
+    min-height: 50px;
+}
+
+footer .newsletter {
+    height: 30vh;
+}
+
+footer .subscription {
+    display: inline-block;
+    position: relative;
+    top: 20%;
+}
+
+footer .copyright {
+    padding: 5px 0px;
+    font-size: 10pt;
+    bottom: 0;
+    position: relative;
+    border-top: #231F20 3px solid;
+    background-color: #fff;
+    text-align: center;
+}

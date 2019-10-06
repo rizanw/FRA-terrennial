@@ -5,16 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Climate Change - Future Ready ASEAN</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="assets/styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <!-- TODO:
-    - Home
-    - Articles
-    - About us
-    - footer isinya link2 web ASEAN
-     -->
+    <nav class="navbar navbar-fixed">
+        <ul class="navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+    <section class="welcome-page">
+        <div class="welcome-container">
+            <div class="logo-animate">
+                <a href="#">
+                    <span class="animated-icon"></span>
+                </a>
+            </div>
+            <div class="show-more">
+                <a href="#">
+                    <img class="arrow-up" src="/assets/arrow.svg">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="main-page">
+        <div class="container">
+            <div class="container-left">
+                <div class="content-left">
+                    <h1>
+                        About
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+                <div class="external-content">
+                    <h1 class="external-title">
+                        External <br>Links
+                    </h1>
+                    <div class="links-group">
+                        <ul>
+                            <li><a href="#">link 1</a></li>
+                            <li><a href="#">link 1</a></li>
+                            <li><a href="#">link 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-main">
+                <!-- aspect ratio: 4x3 -->
+                <div class="post-content">
+                    <h1 class="title-post">Article title</h2>
+                    <div class="img-container">
+                            <img style="text-align: center" src="/assets/img-post.svg">                    
+                    </div>                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#">Read more ... </a>
+                </div>
+                <div class="post-content">
+                    <h1 class="title-post">
+                        Article title
+                    </h1>
+                    <div class="img-container">
+                            <img style="text-align: center" src="/assets/img-post.svg">                    
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#">Read more ... </a>
+                </div>
+        
+            </div>
+            <div class="container-right">
+                <div class="related-title">
+                    <h1>Related Articles</h1>
+                </div>
+                <div class="related-content">
+                    <div class="img-container">
+                            <img style="text-align: center" src="/assets/img-post.svg">                    
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+                <div class="related-content">
+                    <div class="img-container">
+                            <img style="text-align: center" src="/assets/img-post.svg">                    
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+            </div>
+        </div>
+    </section>
      <footer>
-         
+         <div class="newsletter">
+             <form class="subscription">
+                 <label for="email">Subscribe to our newsletter</label>
+                 <div>
+                    <input id="email" placeholder="enter your email :)" type="email">
+                    <input type="submit" value="&#8594;">
+                 </div>
+             </form>
+         </div>
+         <div class="copyright">
+             &copy; 2019
+         </div>
      </footer>
 </body>
 </html>
