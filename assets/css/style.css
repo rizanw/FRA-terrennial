@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+:root {
+    --biru-tua: #4472C4;
+    --biru-muda: #5B9BD5;
+    --hijau: #76be45;
+    --oranye: #ED7D31;
+    --kuning: #FFC000;
+    --hitam: #231F20;
+}
+
+body, html {
+    font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Karla' !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.15;
+    line-height: 1.5;
+    text-align: left;
+
+    color: var(--hitam);
+    background-color: #ffffff;
+
+    margin: 0;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+label {
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: var(--hijau);
+    font-weight: bold;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style: none;
+    border-bottom: #231F20 3px solid ;
+}
+
