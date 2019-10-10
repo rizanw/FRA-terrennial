@@ -9,6 +9,13 @@
     --hitam: #231F20;
 }
 
+/* 
+ *  General Styling
+*/
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Karla' !important;
@@ -33,14 +40,344 @@ label {
     font-weight: bold;
 }
 
-.navbar {
-    background-color: var(--hijau);
-    font-weight: bold;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    list-style: none;
-    border-bottom: #231F20 3px solid ;
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--oranye);
 }
 
+a:hover {
+    color: var(--kuning);
+}
+
+/* 
+ * End of General Styling
+*/
+
+
+/* 
+ *  Navbar Styling
+*/
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: var(--hijau);
+    border-bottom: 3px solid var(--hitam);
+}
+
+.navbar > .nav-header {
+    display: inline;
+    margin-left: 100px;
+}
+
+.navbar > .nav-header > .nav-title {
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar > .nav-btn {
+    display: none;
+}
+
+.navbar > .nav-links {
+    display: inline;
+    float: right;
+    margin-right: 100px;
+}
+
+.navbar > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar > #nav-check {
+    display: none;
+}
+/* 
+ *  Navbar Styling on mobile
+*/
+@media (max-width:600px) {
+    .navbar > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .navbar > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .navbar > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .navbar > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .navbar > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .navbar > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .navbar > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+    /* 
+     *  End of Navbar Styling on mobile
+    */
+}
+/* 
+ *  End of Navbar Styling
+*/
+/* 
+ *  Wrapper Styling
+*/
+.wrapper {
+    width: calc(100% - 300px);
+    margin: 0 auto;
+}
+.paper-background {
+    margin-top: -1px;
+    border: 1px solid #eeeeee;
+    background-image: url('https://static.tumblr.com/c8f93e108fe511692b1c258193108ce9/3cfauon/kURng6a9y/tumblr_static_22j4nasnd89w0gcc0cc0cwso4.png');
+}
+@media (max-width:600px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+/* 
+ *  End of Wrapper Styling
+*/
+/* 
+ *  Header Styling
+*/
+#header-1{
+    background-color: #4472C4;
+    width: 100%;
+    height: 100vh;
+}
+#header-2{
+    background-color: #4472C4;
+    width: 100%;
+    height: 60vh;
+}
+.logo-animate a {
+    display: inline-block;
+    position: absolute;
+    top: calc(50%);
+    left: calc(50% - 1.4%);
+
+}
+.animated-icon {
+    background-image: url(https://climate.nasa.gov/assets/globe_with_satellites.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.show-more {
+    display: inline-block;
+    position: absolute;
+    top: 92%; left: 50%;
+}
+
+.arrow-up {
+    width: 50px;
+    height: 50px;
+    display: block;
+    fill: #fff;
+}
+.svg-chevron {
+    fill: #fff;
+}
+/* 
+ *  End of Header Styling
+*/
+/* 
+ *  Container Styling
+*/
+.container {
+    width: calc(100% - 300px);
+    margin: 0 auto;
+    padding: 46px;
+}
+
+.container-full {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFC000;
+}
+
+.container-main {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.container-aside {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 20px;
+}
+.container-content {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .container-main {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+/* 
+ *  End of Container Styling
+*/
+/* 
+ *  Content Box Styling
+*/
+.content-box {
+    border: 3px solid var(--hitam);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.content-box h2 {
+    margin: 0;
+}
+.content-box > .link-item {
+    margin-top: 20px;
+}
+.post-title {
+    margin-bottom: 16px;
+}
+.post-title > h1{
+    margin: 0;
+    font-weight: bolder;
+}
+.post-title > .timestamp-article {
+    font-size: smaller;
+    color: var(--hitam);
+    opacity: 0.7;
+}
+.post > img {
+    width: 100%;
+}
+.main-pagination {
+    padding: 14px;
+}
+.main-pagination > .back-to-top{
+    display: inline;
+}
+.main-pagination > .pagination-items{
+    display: inline;
+    float: right;
+}
+.pagination-items > a {
+    padding: 10px 15px;
+}
+.pagination-items > .a-selected {
+    cursor: unset;
+    color: var(--hitam);
+    font-weight: bold;
+}
+/* 
+ *  End of Content Box Styling
+*/
+/* 
+ *  footer Styling
+*/
+footer {
+    background-color: var(--biru-tua);
+    text-align: center;
+    border-top: #231F20 3px solid;
+}   
+
+footer label {
+    font-size: 14pt;
+    color: #fff;
+}
+
+input[type=email] {
+    box-sizing: border-box;
+    padding: 3px 15px;
+    margin: 8px 0;
+    position: relative;
+    outline: none;
+    border: #231F20 3px solid;
+    border-radius: 5px;
+    min-width: 400px;
+    min-height: 50px;
+    font-size: 12pt;
+}
+
+input[type=submit] {
+    box-sizing: border-box;
+    padding: 3px 10px;
+    margin: 8px 5px;
+    position: relative;
+    outline: none;
+    border: #231F20 3px solid;
+    border-radius: 5px;
+    background-color: #ED7D31;
+    min-width: 80px;
+    min-height: 50px;
+}
+
+footer .newsletter {
+    height: 30vh;
+}
+
+footer .subscription {
+    display: inline-block;
+    position: relative;
+    top: 20%;
+}
+
+footer .subscription-box {
+    margin-top: 20px;
+}
+
+footer .copyright {
+    padding: 5px 0px;
+    font-size: 10pt;
+    bottom: 0;
+    position: relative;
+    border-top: #231F20 3px solid;
+    background-color: #fff;
+    text-align: center;
+}
+/* 
+ *  end of footer Styling
+*/
