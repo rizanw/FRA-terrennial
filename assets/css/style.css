@@ -6,7 +6,8 @@
     --hijau: #76be45;
     --oranye: #ED7D31;
     --kuning: #FFC000;
-    --hitam: #231F20;
+    --hitam: #444;
+    --hitam-border: #888;
 }
 
 /* 
@@ -61,9 +62,9 @@ a:hover {
 .navbar {
     position: fixed;
     width: 100%;
-    height: 50px;
-    background-color: var(--hijau);
-    border-bottom: 3px solid var(--hitam);
+    height: 70px;
+    background-color: var(--biru-muda);
+    border-bottom: 3px solid var(--hitam-border);
     z-index: 999;
 }
 
@@ -90,9 +91,11 @@ a:hover {
 
 .navbar > .nav-links > a {
     display: inline-block;
-    padding: 13px 10px 13px 10px;
+    padding: 22px 15px;
     text-decoration: none;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .navbar > .nav-links > a:hover {
@@ -105,7 +108,7 @@ a:hover {
 /* 
  *  Navbar Styling on mobile
 */
-@media (max-width:600px) {
+@media (max-width:767px) {
     .navbar > .nav-btn {
         display: inline-block;
         position: absolute;
@@ -125,7 +128,7 @@ a:hover {
         display: block;
         width: 25px;
         height: 10px;
-        border-top: 2px solid #eee;
+        border-top: 3px solid #eee;
     }
     .navbar > .nav-links {
         position: absolute;
@@ -160,7 +163,7 @@ a:hover {
  *  Wrapper Styling
 */
 .wrapper {
-    width: calc(100% - 300px);
+    width: calc(100% - 500px);
     margin: 0 auto;
 }
 .paper-background {
@@ -168,7 +171,12 @@ a:hover {
     border: 1px solid #eeeeee;
     background-image: url('https://static.tumblr.com/c8f93e108fe511692b1c258193108ce9/3cfauon/kURng6a9y/tumblr_static_22j4nasnd89w0gcc0cc0cwso4.png');
 }
-@media (max-width:600px) {
+@media only screen and (max-width:1024px) {
+    .wrapper {
+        width: calc(100% - 200px);
+    }
+}
+@media only screen and (max-width:767px) {
     .wrapper {
         width: 100%;
     }
@@ -183,7 +191,7 @@ a:hover {
     background-color: #4472C4;
     width: 100%;
     height: 100vh;
-    border: 3px solid var(--hitam);
+    border: 3px solid var(--hitam-border);
 }
 #header-2{
     background-color: #4472C4;
@@ -256,7 +264,7 @@ a:hover {
     padding: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .container-main {
       -webkit-flex-direction: column;
       flex-direction: column;
@@ -269,7 +277,7 @@ a:hover {
  *  Content Box Styling
 */
 .content-box {
-    border: 3px solid var(--hitam);
+    border: 3px solid var(--hitam-border);
     border-radius: 10px;
     padding: 24px;
     margin-bottom: 20px;
@@ -298,6 +306,10 @@ a:hover {
 }
 .main-pagination {
     padding: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10pt;
 }
 .main-pagination > .back-to-top{
     display: inline;
@@ -331,13 +343,13 @@ footer label {
     color: #fff;
 }
 
-input[type=email] {
+/* input[type=email] {
     box-sizing: border-box;
     padding: 3px 15px;
     margin: 8px 0;
     position: relative;
     outline: none;
-    border: #231F20 3px solid;
+    border: 3px solid var(--hitam-border);
     border-radius: 5px;
     min-width: 400px;
     min-height: 50px;
@@ -350,12 +362,12 @@ input[type=submit] {
     margin: 8px 5px;
     position: relative;
     outline: none;
-    border: #231F20 3px solid;
+    border: 3px solid var(--hitam-border);
     border-radius: 5px;
     background-color: #ED7D31;
     min-width: 80px;
     min-height: 50px;
-}
+} */
 
 footer .newsletter {
     height: 30vh;
@@ -376,7 +388,7 @@ footer .copyright {
     font-size: 10pt;
     bottom: 0;
     position: relative;
-    border-top: #231F20 3px solid;
+    border-top: 3px solid var(--hitam-border);
     background-color: #fff;
     text-align: center;
 }
@@ -404,21 +416,46 @@ footer .copyright {
 .form-control {
     display: block;
     width: 100%;
+    margin: 3px;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 12pt;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
-    background-clip: padding-box;    
+    background-clip: padding-box;
     border: 3px solid var(--hitam);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
+.btn-orange {
+    
+}
 
 /*
 *   about us page
 */
-.profile {
-    
+.profile svg{
+    max-width: 200px;
+}
+
+
+
+
+/*
+*   mascot styling 
+*/
+.floating-mascot {
+    position: fixed;
+    right: 6px;
+    bottom: 27px;
+}
+.floating-mascot img {
+    max-width: 300px;
+}
+
+@media (max-width: 767px) {
+    .floating-mascot {
+        display: none;
+    }
 }
