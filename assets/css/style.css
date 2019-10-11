@@ -64,6 +64,7 @@ a:hover {
     height: 50px;
     background-color: var(--hijau);
     border-bottom: 3px solid var(--hitam);
+    z-index: 999;
 }
 
 .navbar > .nav-header {
@@ -182,6 +183,7 @@ a:hover {
     background-color: #4472C4;
     width: 100%;
     height: 100vh;
+    border: 3px solid var(--hitam);
 }
 #header-2{
     background-color: #4472C4;
@@ -381,3 +383,34 @@ footer .copyright {
 /* 
  *  end of footer Styling
 */
+
+
+/*
+*   post page
+*/
+
+.logo-animate > a {
+    top: 25%;
+}
+
+.social-share {
+    margin-bottom: 20px;
+}
+
+.social-share a {
+    margin: 0 5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;    
+    border: 3px solid var(--hitam);
+    border-radius: 10px;
+}
