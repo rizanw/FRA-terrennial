@@ -213,7 +213,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 65px;
-    background-color: #fff;
+    background-color: #737373;
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
@@ -232,6 +232,7 @@ a:hover {
 }
 .featured-post-dock {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: relative;
     width: 100%; 
@@ -240,6 +241,7 @@ a:hover {
 }
 .featured-post-item {
     background-color: #fff;
+    position: relative;
     margin: 0 10px;
     height: 100px;
     width: 200px;
@@ -249,35 +251,64 @@ a:hover {
     border-radius: 10px;
     cursor: pointer;
 }
-.logo-animate a {
-    display: inline-block;
+.featured-post-item > label {
+    top: 50%;
+    left: 50%;
     position: absolute;
-    top: calc(50%);
-    left: calc(50% - 1.4%);
-
-}
-.animated-icon {
-    background-image: url(https://climate.nasa.gov/assets/globe_with_satellites.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100px;
-    height: 100px;
-    display: block;
-}
-.show-more {
-    display: inline-block;
-    position: absolute;
-    top: 89%; left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14pt;
+    line-height: 16pt;
+    width: 88%;
+    cursor: pointer;
 }
 
-.arrow-up {
-    width: 50px;
-    height: 50px;
-    display: block;
-    fill: #fff;
+.featured-post-item > label > span {
+    font-size: 18pt;
+    font-weight: bold;
 }
-.svg-chevron {
-    fill: #fff;
+
+[id^="featured-post-"]:hover [id^="post-title-"] > span{
+    display: none;
+}
+
+[id^="featured-post-"]:hover #post-title-1::after{
+    content: "Introduction to Climate Change";
+}
+
+[id^="featured-post-"]:hover #post-title-2::after{
+    content: "The Major Cause to Climate Change";
+}
+
+[id^="featured-post-"]:hover #post-title-3::after{
+    content: "Climate Change Is Affecting Everyone";
+}
+
+[id^="featured-post-"]:hover #post-title-4::after{
+    content: "How to Combat Climate Change";
+}
+
+#post-title-1{
+    color: #f25022;
+}
+#post-title-2{
+    color: #7fba00;
+}
+#post-title-3{
+    color: #00a4ef;
+}
+#post-title-4{
+    color: #ffb900;
+}
+@media only screen and (max-width: 767px) {
+    .featured-post-item {
+        margin: 5px;
+        width: 166px;
+    }
+    .featured-post-dock {
+        top: 65%;
+    }
 }
 /* 
  *  End of Header Styling
@@ -420,7 +451,7 @@ section.right {
     margin: 0;
 }
 .main-pagination {
-    padding: 14px;
+    padding: 20px 30px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -452,6 +483,9 @@ section.right {
     margin-top: 20px;
 }
 
+.comment-box > .button {
+    font-size: 9pt !important;
+}
 .logo-animate > a {
     top: 25%;
 }
@@ -485,10 +519,10 @@ section.right {
     display: inline-block;
     margin: 7px;
     margin-left: 0;
-    padding: 10px;
+    padding: 5px 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 10pt;
+    font-size: 9pt !important;
     font-weight: bold;
     color: var(--hitam);
     border: 3px solid var(--hitam);
