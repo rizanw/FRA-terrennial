@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-    color: var(--kuning);
+    color: var(--hitam);
 }
 
 /* 
@@ -80,7 +80,16 @@ a:hover {
 .navbar > .nav-header > .nav-title {
     display: inline-block;
     color: #fff;
-    padding: 10px;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.nav-title > a {
+    color: #fff;
+}
+
+.nav-title > a:hover {
+    color: #fff;
 }
 
 .navbar > .nav-btn {
@@ -90,7 +99,13 @@ a:hover {
 .navbar > .nav-links {
     display: inline;
     float: right;
-    margin-right: 100px;
+    margin-right: 55px;
+}
+
+.terrenial-logo {
+    letter-spacing: 2px;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 .navbar > .nav-links > a {
@@ -175,7 +190,7 @@ a:hover {
 .paper-background {
     margin-top: -1px;
     border: 1px solid #eeeeee;
-    background-image: url('https://static.tumblr.com/c8f93e108fe511692b1c258193108ce9/3cfauon/kURng6a9y/tumblr_static_22j4nasnd89w0gcc0cc0cwso4.png');
+    background-image: url('../img/wh-block.png');
 }
 @media only screen and (max-width:1024px) {
     .wrapper {
@@ -194,15 +209,16 @@ a:hover {
  *  Header Styling
 */
 #header-1{
-    background-color: #F4EDE5;
     background-image: url("../img/main-header.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size:cover;
+    background-position-y: 65px;
+    background-color: #fff;
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
-    border: 3px solid var(--hitam);
+    border: 1px solid var(--hitam-border);
+    border-radius: 10px;
 }
 #header-2{
     background-color: #4472C4;
@@ -213,6 +229,25 @@ a:hover {
     width: 100%;
     height: 60vh;
     margin-top: 68px;
+}
+.featured-post-dock {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%; 
+    height: 100px;
+    top: 82%;
+}
+.featured-post-item {
+    background-color: #fff;
+    margin: 0 10px;
+    height: 100px;
+    width: 200px;
+    order: 2;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+    border: 3px solid var(--hitam-border);
+    border-radius: 10px;
+    cursor: pointer;
 }
 .logo-animate a {
     display: inline-block;
@@ -232,7 +267,7 @@ a:hover {
 .show-more {
     display: inline-block;
     position: absolute;
-    top: 92%; left: 50%;
+    top: 89%; left: 50%;
 }
 
 .arrow-up {
@@ -258,8 +293,8 @@ a:hover {
 
 .container-full {
     width: 100%;
+    padding: 0;
     margin: 0 auto;
-    background-color: #FFC000;
 }
 
 .container-main {
@@ -324,9 +359,45 @@ section.right {
     margin: 0;
     margin-bottom: 20px;
 }
-.content-box > .link-item {
-    margin-top: 20px;
+.link-item > [id^="link-check-"] {
+    display: none;
 }
+.link-item > .link-btn {
+    display: block;
+    margin: 0 0 5px 0; 
+}
+.link-item > .link-btn > label{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 5px 0;
+    border-bottom: 3px solid var(--hitam);
+    letter-spacing: 1px;
+}
+.link-item > .link-list {
+    display: block;
+    width: 100%;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+}
+.link-item > .link-list > a {
+    display: block;
+    width: 100%;
+    padding: 0 0 5px 0;
+    margin: 0 0 5px 0;
+    border-bottom: 1px solid var(--hitam);
+}
+.link-item > [id^="link-check-"]:not(:checked) ~ .link-list {        
+    height: 0px;
+}
+.link-item > [id^="link-check-"]:checked ~ .link-list {
+    height: auto;
+    overflow-y: auto;
+}
+
 .post-title {
     margin-bottom: 16px;
 }
