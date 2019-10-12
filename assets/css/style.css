@@ -485,7 +485,9 @@ section.right {
 .related-textbox {
     margin-top: 20px;
 }
-
+.related-textbox > a > label {
+    cursor: pointer;
+}
 .comment-box > .button {
     font-size: 9pt !important;
 }
