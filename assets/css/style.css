@@ -138,9 +138,9 @@ a:hover {
     }
     .navbar > .nav-btn > label {
         display: inline-block;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
+        width: 70px;
+        height: 70px;
+        padding: 24px;
     }
     .navbar > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
         background-color: rgba(0, 0, 0, 0.3);
@@ -668,10 +668,14 @@ footer .copyright {
 /*
 *   about us page
 */
-.profile svg{
+.profile-image{
     max-width: 200px;
+    border: 3px solid var(--hitam);
+    border-radius: 20px;
 }
-
+.profile-image:hover{
+    transform: scaleX(-1);
+}
 
 
 
