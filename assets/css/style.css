@@ -619,7 +619,9 @@ a.button:hover{
     border-bottom-right-radius: 0;
 }
 #search-icon {
-    max-width: 12pt;
+    display: block;    
+    width: 12pt;
+    height: 12pt;
 }
 /* 
  *  footer Styling
