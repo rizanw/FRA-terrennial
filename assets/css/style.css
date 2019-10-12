@@ -68,7 +68,7 @@ a:hover {
     width: 100%;
     height: 70px;
     background-color: var(--biru-muda);
-    border-bottom: 3px solid var(--hitam-border);
+    border-bottom: 3px solid var(--hitam);
     z-index: 999;
 }
 
@@ -197,7 +197,7 @@ a:hover {
     background-color: #4472C4;
     width: 100%;
     height: 100vh;
-    border: 3px solid var(--hitam-border);
+    border: 3px solid var(--hitam);
 }
 #header-2{
     background-color: #4472C4;
@@ -306,12 +306,13 @@ section.right {
 .content-box {
     border: 3px solid var(--hitam-border);
     border-radius: 10px;
-    padding: 24px;
+    padding: 30px;
     margin-bottom: 20px;
     background-color: #fff;
 }
 .content-box h2 {
     margin: 0;
+    margin-bottom: 20px;
 }
 .content-box > .link-item {
     margin-top: 20px;
@@ -320,16 +321,22 @@ section.right {
     margin-bottom: 16px;
 }
 .post-title > h1{
-    margin: 0;
+    margin: 0 0 7px 0;
+    font-size: 20pt;
     font-weight: bolder;
 }
 .post-title > .timestamp-article {
-    font-size: smaller;
     color: var(--hitam);
     opacity: 0.7;
 }
 .post > img {
     width: 100%;
+}
+.post > p {
+    margin-bottom: 15px;
+}
+.post > a {
+    margin: 0;
 }
 .main-pagination {
     padding: 14px;
@@ -356,73 +363,6 @@ section.right {
 /* 
  *  End of Content Box Styling
 */
-/* 
- *  footer Styling
-*/
-footer {
-    background-color: var(--biru-tua);
-    text-align: center;
-    border-top: #231F20 3px solid;
-}   
-
-footer label {
-    font-size: 14pt;
-    color: #fff;
-}
-
-/* input[type=email] {
-    box-sizing: border-box;
-    padding: 3px 15px;
-    margin: 8px 0;
-    position: relative;
-    outline: none;
-    border: 3px solid var(--hitam-border);
-    border-radius: 5px;
-    min-width: 400px;
-    min-height: 50px;
-    font-size: 12pt;
-}
-
-input[type=submit] {
-    box-sizing: border-box;
-    padding: 3px 10px;
-    margin: 8px 5px;
-    position: relative;
-    outline: none;
-    border: 3px solid var(--hitam-border);
-    border-radius: 5px;
-    background-color: #ED7D31;
-    min-width: 80px;
-    min-height: 50px;
-} */
-
-footer .newsletter {
-    height: 30vh;
-}
-
-footer .subscription {
-    display: inline-block;
-    position: relative;
-    top: 20%;
-}
-
-footer .subscription-box {
-    margin-top: 20px;
-}
-
-footer .copyright {
-    padding: 5px 0px;
-    font-size: 10pt;
-    bottom: 0;
-    position: relative;
-    border-top: 3px solid var(--hitam-border);
-    background-color: #fff;
-    text-align: center;
-}
-/* 
- *  end of footer Styling
-*/
-
 
 /*
 *   post page
@@ -443,10 +383,12 @@ footer .copyright {
     margin: 0 5px;
 }
 
+/*
+*   Form and input styling
+*/
 .form-control {
     display: block;
     width: 100%;
-    margin: 3px;
     padding: .375rem .75rem;
     font-size: 12pt;
     font-weight: 400;
@@ -458,9 +400,155 @@ footer .copyright {
     border-radius: 5px;
 }
 
-.btn-orange {
-
+.button {
+    display: inline-block;
+    margin: 7px;
+    margin-left: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10pt;
+    font-weight: bold;
+    color: var(--hitam);
+    border: 3px solid var(--hitam);
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+a.button:hover{
+    text-decoration: underline;
+    color: var(--hitam);
+    background-color: #fff;
+}
+
+.btn-subscribe {
+    box-sizing: border-box;
+    position: relative;
+    outline: none;
+    border-radius: 5px;
+    min-width: 80px;
+}
+
+.btn-orange {
+    background-color: var(--oranye);
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group > .form-control {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+.input-group-append {
+    margin-left: -1px;
+    display: flex;
+    display: -ms-flexbox;
+}
+.input-group-append > span {
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--hitam);
+    line-height: 1.5;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: var(--oranye);
+    border: 3px solid var(--hitam);
+    border-radius: 5px;
+}
+.input-group > .form-control:not(:first-child) {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group > .form-control:not(:last-child) {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group > .input-group-append > span {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group > .input-group-prepend > span {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#search-icon {
+    max-width: 12pt;
+}
+/* 
+ *  footer Styling
+*/
+footer {
+    background-color: var(--biru-tua);
+    text-align: center;
+    border-top: 3px solid var(--hitam);
+}   
+
+footer label {
+    font-size: 14pt;
+    color: #fff;
+}
+
+footer .newsletter {
+    height: 30vh;
+}
+
+footer .subscription {
+    display: inline-block;
+    position: relative;
+    top: 20%;
+}
+
+.subscription input {
+    display: inline;
+    width: unset;
+}
+
+.email-subscribe {
+    min-width: 250px;
+}
+
+footer .subscription-box {
+    margin-top: 20px;
+}
+
+footer .copyright {
+    padding: 5px 0px;
+    font-size: 10pt;
+    bottom: 0;
+    position: relative;
+    border-top: 3px solid var(--hitam);
+    background-color: #fff;
+    text-align: center;
+}
+@media only screen and (min-width:1024px) {
+    .email-subscribe {    
+        min-width: 380px;
+    }
+}
+/* 
+ *  end of footer Styling
+*/
+
 
 /*
 *   about us page
@@ -488,4 +576,9 @@ footer .copyright {
     .floating-mascot {
         display: none;
     }
+}
+
+
+#svg-clock {
+    fill: green;
 }
