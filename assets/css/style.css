@@ -37,9 +37,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-p {
+/* p {
     margin-bottom: 0;
-}
+} */
 
 label {
     font-weight: bold;
@@ -248,7 +248,7 @@ a:hover {
     width: 200px;
     order: 2;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.10);
-    border: 3px solid var(--hitam-border);
+    border: 2.5px solid var(--hitam-border);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -342,9 +342,9 @@ a:hover {
 }
 
 .container-content {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
     padding: 15px;
 }
 
@@ -381,7 +381,7 @@ section.right {
  *  Content Box Styling
 */
 .content-box {
-    border: 3px solid var(--hitam-border);
+    border: 2.5px solid var(--hitam-border);
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 20px;
@@ -516,7 +516,7 @@ section.right {
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 5px;
 }
 
@@ -528,7 +528,7 @@ section.right {
     font-size: 9pt !important;
     font-weight: bold;
     color: var(--hitam);
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -595,7 +595,7 @@ a.button:hover{
     font-size: 12pt;
     font-weight: bold;
     background-color: var(--oranye);
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 5px;
 }
 .input-group > .form-control:not(:first-child) {
@@ -692,10 +692,18 @@ footer .copyright {
 */
 .profile-image{
     max-width: 200px;
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 20px;
 }
-.profile-image:hover {
+.profile img {
+    width: auto;
+    margin: 0 3px 0 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    bottom: -2.9px;
+}
+.profile:hover .profile-image {
     transform: scaleX(-1);
 }
 .profile-name {
