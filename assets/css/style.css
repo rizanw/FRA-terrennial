@@ -194,15 +194,25 @@ a:hover {
  *  Header Styling
 */
 #header-1{
-    background-color: #4472C4;
+    background-color: #F4EDE5;
+    background-image: url("../img/main-header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
     border: 3px solid var(--hitam);
 }
 #header-2{
     background-color: #4472C4;
+    background-image: url("../img/header-small.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
     width: 100%;
     height: 60vh;
+    margin-top: 68px;
 }
 .logo-animate a {
     display: inline-block;
