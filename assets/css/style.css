@@ -27,7 +27,7 @@ body, html {
     text-align: left;
 
     color: var(--hitam);
-    background-color: #fafafa;
+    background-color: #f9f9f9;
 
     margin: 0;
     height: 100%;
@@ -68,7 +68,7 @@ a:hover {
     width: 100%;
     height: 70px;
     background-color: var(--biru-muda);
-    border-bottom: 3px solid var(--hitam);
+    /* border-bottom: 3px solid var(--hitam); */
     z-index: 999;
 }
 
@@ -387,9 +387,10 @@ section.right {
     margin-bottom: 20px;
     background-color: #fff;
 }
-.content-box h2 {
+.content-box > h2 {
     margin: 0;
     margin-bottom: 20px;
+    font-size: 12pt;
 }
 .link-item > [id^="link-check-"] {
     display: none;
@@ -412,6 +413,7 @@ section.right {
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
+    font-size: 9pt;
     top: 50px;
     left: 0px;
 }
@@ -518,8 +520,6 @@ section.right {
 
 .button {
     display: inline-block;
-    margin: 7px;
-    margin-left: 0;
     padding: 5px 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -543,6 +543,15 @@ a.button:hover{
     outline: none;
     border-radius: 5px;
     min-width: 80px;
+    padding-bottom: 8px; 
+}
+.btn-subscribe > img {
+    max-width: 12pt;
+    margin: 1px;
+    padding: 0;
+    display: inline;
+    position: relative;
+    bottom: -1.9px;
 }
 
 .btn-orange {
@@ -616,7 +625,7 @@ a.button:hover{
 .footer-landingpage {
     background-color: var(--biru-tua);
     text-align: center;
-    border-top: 3px solid var(--hitam);
+    /* border-top: 3px solid var(--hitam); */
 }   
 
 footer label {
@@ -649,13 +658,23 @@ footer .subscription-box {
 
 footer .copyright {
     padding: 5px 0px;
-    font-size: 10pt;
+    font-size: 6pt;
     bottom: 0;
     position: relative;
-    border-top: 3px solid var(--hitam);
+    border-top: 2.5px solid var(--hitam);
     background-color: #fff;
     text-align: center;
+    letter-spacing: 1px;
 }
+.copyright-icon{
+    max-width: 6pt;
+    margin: 0 3px 0 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    bottom: -0.9px;
+}
+
 @media only screen and (min-width:1024px) {
     .email-subscribe {    
         min-width: 380px;
@@ -674,10 +693,12 @@ footer .copyright {
     border: 3px solid var(--hitam);
     border-radius: 20px;
 }
-.profile-image:hover{
+.profile-image:hover {
     transform: scaleX(-1);
 }
-
+.profile-name {
+    margin: 0;
+}
 
 
 /*
@@ -709,11 +730,3 @@ footer .copyright {
     }
 }
 
-.copyright-icon{
-    max-width: 10pt;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    position: relative;
-    bottom: -1.8px;
-}
