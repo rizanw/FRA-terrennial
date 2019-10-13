@@ -37,6 +37,11 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+ol li, ul li {
+    position: relative;
+    padding-left: 10px;
+}
+
 /* p {
     margin-bottom: 0;
 } */
@@ -53,6 +58,10 @@ a {
 
 a:hover {
     color: var(--hitam);
+}
+
+svg {
+    fill: #444;
 }
 
 /* 
@@ -137,10 +146,10 @@ a:hover {
 
 .navbar > .nav-links > a {
     display: inline-block;
-    padding: 22px 15px;
+    padding: 25px 15px;
     text-decoration: none;
     color: #fff;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -428,9 +437,13 @@ section.right {
 }
 .content-box > h2 {
     margin: 0;
+    color:#ED7D31;
     margin-bottom: 20px;
-    font-size: 12pt;
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
 .link-item > [id^="link-check-"] {
     display: none;
 }
@@ -443,7 +456,7 @@ section.right {
     display: inline-block;
     width: 100%;
     padding: 0 0 5px 0;
-    border-bottom: 3px solid var(--hitam);
+    border-bottom: 2px solid var(--hitam);
     letter-spacing: 1px;
 }
 .link-item > .link-list {
@@ -461,7 +474,7 @@ section.right {
     width: 100%;
     padding: 0 0 5px 0;
     margin: 0 0 5px 0;
-    border-bottom: 1px solid var(--hitam);
+    border-bottom: 1px solid #bbb;
 }
 .link-item > [id^="link-check-"]:not(:checked) ~ .link-list {        
     height: 0px;
@@ -480,10 +493,18 @@ section.right {
     margin: 0 0 7px 0;
     font-size: 20pt;
     font-weight: bolder;
+    color:#444;
+}
+.post-title a {
+    color:#444;
+}
+.post-title a:hover {
+    color: #ED7D31;
 }
 .post-title > .timestamp-article {
     color: var(--hitam);
     opacity: 0.7;
+    font-size: smaller;
 }
 .post img {
     width: 100%;
@@ -499,7 +520,7 @@ section.right {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 10pt;
+    font-size: 9pt;
 }
 .main-pagination > .back-to-top{
     display: inline;
@@ -525,12 +546,32 @@ section.right {
 */
 .related-textbox {
     margin-top: 20px;
+    font-size: 8pt;
 }
 .related-textbox > a > label {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.2em;
     cursor: pointer;
 }
+
+.related-textbox a {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.2em;
+    cursor: pointer;
+}
+
+.related-textbox label:hover {
+    color: var(--oranye);
+    cursor: pointer;
+}
+
 .comment-box > .button {
     font-size: 9pt !important;
+    margin-top: 17px;
 }
 .logo-animate > a {
     top: 25%;
@@ -563,10 +604,11 @@ section.right {
 
 .button {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 9px 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 9pt !important;
+    font-family: 'Karla';
     font-weight: bold;
     color: var(--hitam);
     border: 2.5px solid var(--hitam);
@@ -708,7 +750,7 @@ footer .copyright {
     font-size: 6pt;
     bottom: 0;
     position: relative;
-    border-top: 2.5px solid var(--hitam);
+    border-top: 1px solid #888;
     background-color: #fff;
     text-align: center;
     letter-spacing: 1px;
