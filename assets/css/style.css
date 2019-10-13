@@ -516,7 +516,7 @@ section.right {
     bottom: -1px;
     position: relative;
     display: inline-block;
-    margin-right: 3px;
+    margin: 0 7px 0 7px;
 }
 .post-title {
     margin-bottom: 16px;
