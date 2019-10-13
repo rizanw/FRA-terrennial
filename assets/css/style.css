@@ -516,7 +516,7 @@ section.right {
     bottom: -1px;
     position: relative;
     display: inline-block;
-    margin-right: 3px;
+    margin: 0 7px 0 7px;
 }
 .post-title {
     margin-bottom: 16px;
@@ -562,7 +562,7 @@ section.right {
     float: right;
 }
 .pagination-items > a {
-    padding: 10px 15px;
+    /*padding: 10px 15px;*/
 }
 .pagination-items > .a-selected {
     cursor: unset;
@@ -594,9 +594,11 @@ section.right {
     color: #444;
     line-height: 1.2em;
     cursor: pointer;
+    transition: ease-in-out 0.3s;
 }
 
 .related-textbox label:hover {
+    transition: ease-in-out 0.3s;
     color: var(--oranye);
     cursor: pointer;
 }
@@ -604,6 +606,12 @@ section.right {
 .comment-box > .button {
     font-size: 9pt !important;
     margin-top: 17px;
+}
+.comment-box > .button:hover {
+    background-color: #fff;
+}
+.comment-box > .button:active {
+    background-color: var(--hijau);
 }
 .logo-animate > a {
     top: 25%;
@@ -650,7 +658,6 @@ section.right {
 
 a.button:hover{
     transition: ease-in-out 0.3s;
-    text-decoration: underline;
     color: var(--hitam);
     background-color: #fff;
 }
@@ -815,7 +822,7 @@ footer .copyright {
     border-radius: 20px;
 }
 .profile img {
-    width: auto;
+    /*width: auto;*/
     margin: 0 3px 0 0;
     padding: 0;
     display: inline;
