@@ -485,7 +485,13 @@ section.right {
     overflow-y: auto;
     transition: all 0.3s ease-in;
 }
-
+.link-item img {
+    width: 12px;
+    bottom: -1px;
+    position: relative;
+    display: inline-block;
+    margin-right: 3px;
+}
 .post-title {
     margin-bottom: 16px;
 }
@@ -604,7 +610,7 @@ section.right {
 
 .button {
     display: inline-block;
-    padding: 9px 12px;
+    padding: 6px 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 9pt !important;
