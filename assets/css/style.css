@@ -58,7 +58,34 @@ a:hover {
 /* 
  * End of General Styling
 */
-
+/*
+* animation
+*/
+@-webkit-keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(2000px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateY(0);
+    }
+ }
+ 
+ @keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(2000px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+.fadein-top {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
 
 /* 
  *  Navbar Styling
@@ -117,9 +144,11 @@ a:hover {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: ease-in-out 0.3s;
 }
 
 .navbar > .nav-links > a:hover {
+    transition: ease-in-out 0.5s;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -150,6 +179,7 @@ a:hover {
         width: 25px;
         height: 10px;
         border-top: 3px solid #eee;
+        border-radius: 1px;
     }
     .navbar > .nav-links {
         position: absolute;
@@ -213,7 +243,6 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: -17px;
-    background-color: #737373;
     background-attachment: fixed;
     background-size: calc(900px + 8%);
     width: 100%;
@@ -222,13 +251,13 @@ a:hover {
     border-radius: 10px;
 }
 #header-2{
-    background-color: #4472C4;
     background-image: url("../img/header-small.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
+    background-position-x: center;
+    background-position-y: calc(68px);
+    background-attachment: fixed;
     width: 100%;
-    height: 60vh;
+    height: 54vh;
     margin-top: 68px;
 }
 .featured-post-dock {
@@ -268,6 +297,8 @@ a:hover {
 .featured-post-item > label > span {
     font-size: 18pt;
     font-weight: bold;
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
 }
 
 [id^="featured-post-"]:hover [id^="post-title-"] > span{
@@ -275,18 +306,26 @@ a:hover {
 }
 
 [id^="featured-post-"]:hover #post-title-1::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "Introduction to Climate Change";
 }
 
 [id^="featured-post-"]:hover #post-title-2::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "The Major Cause to Climate Change";
 }
 
 [id^="featured-post-"]:hover #post-title-3::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "Climate Change Is Affecting Everyone";
 }
 
 [id^="featured-post-"]:hover #post-title-4::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "How to Combat Climate Change";
 }
 
@@ -411,7 +450,7 @@ section.right {
     display: block;
     width: 100%;
     height: 0px;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
     overflow-y: hidden;
     font-size: 9pt;
     top: 50px;
@@ -426,10 +465,12 @@ section.right {
 }
 .link-item > [id^="link-check-"]:not(:checked) ~ .link-list {        
     height: 0px;
+    transition: all 0.3s ease-in;
 }
 .link-item > [id^="link-check-"]:checked ~ .link-list {
     height: auto;
     overflow-y: auto;
+    transition: all 0.3s ease-in;
 }
 
 .post-title {
@@ -534,6 +575,7 @@ section.right {
 }
 
 a.button:hover{
+    transition: ease-in-out 0.3s;
     text-decoration: underline;
     color: var(--hitam);
     background-color: #fff;
@@ -557,6 +599,7 @@ a.button:hover{
 }
 
 .btn-orange {
+    transition: ease-in-out 0.3s;
     background-color: var(--oranye);
 }
 
@@ -642,7 +685,7 @@ footer .newsletter {
 }
 
 footer .subscription {
-    display: inline-block;
+    display: block;
     position: relative;
     top: 20%;
 }
