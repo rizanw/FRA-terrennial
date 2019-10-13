@@ -37,9 +37,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-p {
-    margin-bottom: 0;
+ol li, ul li {
+    position: relative;
+    padding-left: 10px;
 }
+
+/* p {
+    margin-bottom: 0;
+} */
 
 label {
     font-weight: bold;
@@ -55,10 +60,41 @@ a:hover {
     color: var(--hitam);
 }
 
+svg {
+    fill: #444;
+}
+
 /* 
  * End of General Styling
 */
-
+/*
+* animation
+*/
+@-webkit-keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(2000px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateY(0);
+    }
+ }
+ 
+ @keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(2000px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+.fadein-top {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
 
 /* 
  *  Navbar Styling
@@ -110,16 +146,18 @@ a:hover {
 
 .navbar > .nav-links > a {
     display: inline-block;
-    padding: 22px 15px;
+    padding: 25px 15px;
     text-decoration: none;
     color: #fff;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: ease-in-out 0.3s;
 }
 
 .navbar > .nav-links > a:hover {
+    transition: ease-in-out 0.5s;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -150,6 +188,7 @@ a:hover {
         width: 25px;
         height: 10px;
         border-top: 3px solid #eee;
+        border-radius: 1px;
     }
     .navbar > .nav-links {
         position: absolute;
@@ -213,7 +252,6 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: -17px;
-    background-color: #737373;
     background-attachment: fixed;
     background-size: calc(900px + 8%);
     width: 100%;
@@ -222,13 +260,13 @@ a:hover {
     border-radius: 10px;
 }
 #header-2{
-    background-color: #4472C4;
     background-image: url("../img/header-small.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
+    background-position-x: center;
+    background-position-y: calc(68px);
+    background-attachment: fixed;
     width: 100%;
-    height: 60vh;
+    height: 54vh;
     margin-top: 68px;
 }
 .featured-post-dock {
@@ -248,7 +286,7 @@ a:hover {
     width: 200px;
     order: 2;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.10);
-    border: 3px solid var(--hitam-border);
+    border: 2.5px solid var(--hitam-border);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -268,6 +306,8 @@ a:hover {
 .featured-post-item > label > span {
     font-size: 18pt;
     font-weight: bold;
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
 }
 
 [id^="featured-post-"]:hover [id^="post-title-"] > span{
@@ -275,18 +315,26 @@ a:hover {
 }
 
 [id^="featured-post-"]:hover #post-title-1::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "Introduction to Climate Change";
 }
 
 [id^="featured-post-"]:hover #post-title-2::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "The Major Cause to Climate Change";
 }
 
 [id^="featured-post-"]:hover #post-title-3::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "Climate Change Is Affecting Everyone";
 }
 
 [id^="featured-post-"]:hover #post-title-4::after{
+    animation-name: fadeInUp;
+    animation-duration: 1.2s;
     content: "How to Combat Climate Change";
 }
 
@@ -342,9 +390,9 @@ a:hover {
 }
 
 .container-content {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
     padding: 15px;
 }
 
@@ -381,7 +429,7 @@ section.right {
  *  Content Box Styling
 */
 .content-box {
-    border: 3px solid var(--hitam-border);
+    border: 2.5px solid var(--hitam-border);
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 20px;
@@ -389,9 +437,13 @@ section.right {
 }
 .content-box > h2 {
     margin: 0;
+    color:#ED7D31;
     margin-bottom: 20px;
-    font-size: 12pt;
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
 .link-item > [id^="link-check-"] {
     display: none;
 }
@@ -404,14 +456,14 @@ section.right {
     display: inline-block;
     width: 100%;
     padding: 0 0 5px 0;
-    border-bottom: 3px solid var(--hitam);
+    border-bottom: 2px solid var(--hitam);
     letter-spacing: 1px;
 }
 .link-item > .link-list {
     display: block;
     width: 100%;
     height: 0px;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
     overflow-y: hidden;
     font-size: 9pt;
     top: 50px;
@@ -422,16 +474,24 @@ section.right {
     width: 100%;
     padding: 0 0 5px 0;
     margin: 0 0 5px 0;
-    border-bottom: 1px solid var(--hitam);
+    border-bottom: 1px solid #bbb;
 }
 .link-item > [id^="link-check-"]:not(:checked) ~ .link-list {        
     height: 0px;
+    transition: all 0.3s ease-in;
 }
 .link-item > [id^="link-check-"]:checked ~ .link-list {
     height: auto;
     overflow-y: auto;
+    transition: all 0.3s ease-in;
 }
-
+.link-item img {
+    width: 12px;
+    bottom: -1px;
+    position: relative;
+    display: inline-block;
+    margin-right: 3px;
+}
 .post-title {
     margin-bottom: 16px;
 }
@@ -439,10 +499,18 @@ section.right {
     margin: 0 0 7px 0;
     font-size: 20pt;
     font-weight: bolder;
+    color:#444;
+}
+.post-title a {
+    color:#444;
+}
+.post-title a:hover {
+    color: #ED7D31;
 }
 .post-title > .timestamp-article {
     color: var(--hitam);
     opacity: 0.7;
+    font-size: smaller;
 }
 .post img {
     width: 100%;
@@ -458,7 +526,7 @@ section.right {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 10pt;
+    font-size: 9pt;
 }
 .main-pagination > .back-to-top{
     display: inline;
@@ -484,12 +552,32 @@ section.right {
 */
 .related-textbox {
     margin-top: 20px;
+    font-size: 8pt;
 }
 .related-textbox > a > label {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.2em;
     cursor: pointer;
 }
+
+.related-textbox a {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.2em;
+    cursor: pointer;
+}
+
+.related-textbox label:hover {
+    color: var(--oranye);
+    cursor: pointer;
+}
+
 .comment-box > .button {
     font-size: 9pt !important;
+    margin-top: 17px;
 }
 .logo-animate > a {
     top: 25%;
@@ -516,24 +604,26 @@ section.right {
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 5px;
 }
 
 .button {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 6px 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 9pt !important;
+    font-family: 'Karla';
     font-weight: bold;
     color: var(--hitam);
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 5px;
     cursor: pointer;
 }
 
 a.button:hover{
+    transition: ease-in-out 0.3s;
     text-decoration: underline;
     color: var(--hitam);
     background-color: #fff;
@@ -557,6 +647,7 @@ a.button:hover{
 }
 
 .btn-orange {
+    transition: ease-in-out 0.3s;
     background-color: var(--oranye);
 }
 
@@ -595,7 +686,7 @@ a.button:hover{
     font-size: 12pt;
     font-weight: bold;
     background-color: var(--oranye);
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 5px;
 }
 .input-group > .form-control:not(:first-child) {
@@ -619,7 +710,9 @@ a.button:hover{
     border-bottom-right-radius: 0;
 }
 #search-icon {
-    max-width: 12pt;
+    display: block;    
+    width: 12pt;
+    height: 12pt;
 }
 /* 
  *  footer Styling
@@ -640,7 +733,7 @@ footer .newsletter {
 }
 
 footer .subscription {
-    display: inline-block;
+    display: block;
     position: relative;
     top: 20%;
 }
@@ -663,7 +756,7 @@ footer .copyright {
     font-size: 6pt;
     bottom: 0;
     position: relative;
-    border-top: 2.5px solid var(--hitam);
+    border-top: 1px solid #888;
     background-color: #fff;
     text-align: center;
     letter-spacing: 1px;
@@ -692,10 +785,18 @@ footer .copyright {
 */
 .profile-image{
     max-width: 200px;
-    border: 3px solid var(--hitam);
+    border: 2.5px solid var(--hitam);
     border-radius: 20px;
 }
-.profile-image:hover {
+.profile img {
+    width: auto;
+    margin: 0 3px 0 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    bottom: -2.9px;
+}
+.profile:hover .profile-image {
     transform: scaleX(-1);
 }
 .profile-name {
