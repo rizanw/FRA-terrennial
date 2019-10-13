@@ -228,17 +228,43 @@ svg {
 }
 .paper-background {
     margin-top: -1px;
-    border: 1px solid #eeeeee;
+    border: 1px solid #eee;
     background-image: url('../img/wh-block.png');
 }
+.wrapper.archive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    width: calc(100% - 100px);
+    padding-top: 70px;
+}
+.wrapper.archive > .content-box{
+    order: 2;
+    max-width: calc(100% / 3.5);
+    margin: 20px;
+}
+
 @media only screen and (max-width:1024px) {
     .wrapper {
         width: calc(100% - 200px);
+    }
+    .wrapper.archive {
+        width: 100%;
+    }
+    .wrapper.archive > .content-box{
+        max-width: calc(100% / 2);
     }
 }
 @media only screen and (max-width:767px) {
     .wrapper {
         width: 100%;
+    }
+    .wrapper.archive {
+        width: 100%;
+    }
+    .wrapper.archive > .content-box{
+        max-width: unset;
     }
 }
 /* 
