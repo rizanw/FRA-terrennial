@@ -165,7 +165,6 @@ svg {
 .navbar > .nav-links > a {
     display: inline-block;
     padding: 25px 15px;
-    padding-left: 25px;
     text-decoration: none;
     color: var(--putih);
     font-size: 10pt;
@@ -192,7 +191,7 @@ svg {
 .paper-background {
     margin-top: -1px;
     border: 1px solid var(--hitam-border);
-    background-image: url('../img/wh-block.png');
+    background-image: url('../img/block-wh.png');
 }
 .wrapper.archive {
     display: flex;
@@ -215,11 +214,10 @@ svg {
     background-image: url("../img/header-main.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: -17px;
+    background-position-y: 18px;
     background-attachment: fixed;
     background-size: calc(100% - 500px);
     background-color: #fff;
-
     width: 100%;
     height: 100vh;
     border: 1px solid var(--hitam-border);
@@ -243,7 +241,7 @@ svg {
     position: relative;
     width: 100%; 
     height: 100px;
-    top: 85%;
+    top: 78%;
 }
 .featured-post-item {
     background-color: var(--putih);
@@ -275,11 +273,52 @@ svg {
     animation-name: fadeInUp;
     animation-duration: 1.2s;
 }
-
+#featured-post-1 {
+    background-color: #f04d4d;
+    border: 0;
+    background-image: url('../img/fire.svg');
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+#featured-post-2 {
+    background-color: #5ee14f;
+    border: 0;
+    background-image: url('../img/sprout.svg');
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+#featured-post-3 {
+    background-color: #00a4ef;
+    border: 0;
+    background-image: url('../img/drop.svg');
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+#featured-post-4 {
+    background-color: #ffb900;
+    border: 0;
+    background-image: url('../img/pinwheel.svg');
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+#post-title-1{
+    color: #fff;
+}
+#post-title-2{
+    color: #fff;
+}
+#post-title-3{
+    color: #fff;
+}
+#post-title-4{
+    color: #fff;
+}
 [id^="featured-post-"]:hover [id^="post-title-"] > span{
     display: none;
 }
-
+[id^="featured-post-"]:hover{
+    background-image: unset!important;
+}
 [id^="featured-post-"]:hover #post-title-1::after{
     animation-name: fadeInUp;
     animation-duration: 1.2s;
@@ -302,18 +341,6 @@ svg {
     animation-name: fadeInUp;
     animation-duration: 1.2s;
     content: "How to Combat Climate Change";
-}
-#post-title-1{
-    color: #f25022;
-}
-#post-title-2{
-    color: #7fba00;
-}
-#post-title-3{
-    color: #00a4ef;
-}
-#post-title-4{
-    color: #ffb900;
 }
 
 /* 
