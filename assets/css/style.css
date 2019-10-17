@@ -168,7 +168,7 @@ svg {
 /* 
  *  Navbar Styling on mobile
 */
-@media (max-width:767px) {
+@media (max-width:800px) {
     .navbar > .nav-btn {
         display: inline-block;
         position: absolute;
@@ -256,8 +256,14 @@ svg {
     .wrapper.archive > .content-box{
         max-width: calc(100% / 2);
     }
+    #header-1 {
+        background-size: calc(100% - 200px) !important;
+    }
+    #header-2 {
+        background-size: calc(100% - 200px) !important;
+    }
 }
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:800px) {
     .wrapper {
         width: 100%;
     }
@@ -280,7 +286,7 @@ svg {
     background-position: center;
     background-position-y: -17px;
     background-attachment: fixed;
-    background-size: calc(900px + 8%);
+    background-size: calc(100% - 500px);
     width: 100%;
     height: 100vh;
     border: 1px solid var(--hitam-border);
@@ -292,6 +298,7 @@ svg {
     background-position-x: center;
     background-position-y: calc(68px);
     background-attachment: fixed;
+    background-size: calc(100% - 500px);
     width: 100%;
     height: 54vh;
     margin-top: 68px;
@@ -377,7 +384,7 @@ svg {
 #post-title-4{
     color: #ffb900;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
     .featured-post-item {
         margin: 5px;
         width: 166px;
@@ -385,6 +392,32 @@ svg {
     .featured-post-dock {
         top: 65%;
     }
+    #header-1{
+        background-image: url("../img/header-main-mobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: -17px;
+        background-attachment: fixed;
+        background-size: 100% !important;
+        width: 100%;
+        height: 100vh;
+        border: 1px solid var(--hitam-border);
+        border-radius: 10px;
+    }
+    #header-2 {
+        background-size: 100% !important;
+        margin: 0;
+        height: 32vh;
+    }
+}
+@media only screen and (max-width: 1208px) {
+    .featured-post-dock {
+        top: 68%;
+    }
+    .featured-post-item {
+        margin: 4px 37px;
+    }
+
 }
 /* 
  *  End of Header Styling
@@ -443,10 +476,13 @@ section.right {
     padding-left: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     .container-main {
       -webkit-flex-direction: column;
       flex-direction: column;
+    }
+    section.container-content {
+        padding: 19px;
     }
   }
 /* 
@@ -861,7 +897,7 @@ footer .copyright {
     height: 230px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     .floating-mascot {
         display: none;
     }
