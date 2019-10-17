@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 
+/* 
+ *  Variable declaration
+*/
 :root {
+    /* 
+    * light mode
+    */
     --biru-tua: #4472C4;
     --biru-muda: #5B9BD5;
     --hijau: #76be45;
     --oranye: #ED7D31;
     --kuning: #FFC000;
+    --oranye-nav: #FB9C60;
     --hitam: #444;
+    --hitam-placeholder: #777;
     --hitam-border: #888;
+    --hitam-footer: #979797;
+    --abu-abu: #bbb;
+    --abu-abu-nav-btn: #eee;
+    --putih : #fff;
+    --putih-background : #f9f9f9;
+    /* 
+    * light mode
+    */
+
 }
 
 /* 
@@ -16,7 +33,6 @@
 * {
     box-sizing: border-box;
 }
-
 body, html {
     font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Karla' !important;
@@ -27,47 +43,50 @@ body, html {
     text-align: left;
 
     color: var(--hitam);
-    background-color: #f9f9f9;
+    background-color: var(--putih-background);
 
     margin: 0;
     height: 100%;
 }
-
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
-
 ol li, ul li {
     position: relative;
     padding-left: 10px;
 }
-
-/* p {
-    margin-bottom: 0;
-} */
-
+:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'Karla' !important;
+    color: var(--hitam-placeholder);
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Karla' !important;
+    color: var(--hitam-placeholder);
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'Karla' !important;
+    color: var(--hitam-placeholder);
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Karla' !important;
+    color: var(--hitam-placeholder);
+}
 label {
     font-weight: bold;
 }
-
 a {
     text-decoration: none;
     cursor: pointer;
     color: var(--oranye);
     transition:all 0.1s linear;
 }
-
 a:hover {
     color: var(--hitam);
 }
-
 svg {
-    fill: #444;
+    fill: var(--hitam);
 }
 
-/* 
- * End of General Styling
-*/
 /*
 * animation
 */
@@ -81,7 +100,6 @@ svg {
        -webkit-transform: translateY(0);
     }
  }
- 
  @keyframes fadeInUp {
     0% {
        opacity: 0;
@@ -104,122 +122,66 @@ svg {
     position: fixed;
     width: 100%;
     height: 70px;
-    background-color: var(--biru-muda);
+    background-color: var(--oranye-nav);
     /* border-bottom: 3px solid var(--hitam); */
     z-index: 999;
 }
-
 .navbar > .nav-header {
     display: inline;
-    margin-left: 100px;
+    margin-left: 80px;
 }
-
 .navbar > .nav-header > .nav-title {
     display: inline-block;
-    color: #fff;
+    color: var(--putih);
     padding: 20px 15px;
     cursor: pointer;
 }
-
 .nav-title > a {
-    color: #fff;
+    color: var(--putih);
 }
-
+.nav-title > a > img {
+    width: 14pt;
+    display: inline;
+    position: relative;
+    bottom: -2.9px;
+    margin-right: 7px;
+}
 .nav-title > a:hover {
-    color: #fff;
+    color: var(--putih);
 }
-
 .navbar > .nav-btn {
     display: none;
 }
-
 .navbar > .nav-links {
     display: inline;
     float: right;
     margin-right: 55px;
 }
-
 .terrenial-logo {
     letter-spacing: 2px;
     font-size: 14pt;
     font-weight: bold;
 }
-
 .navbar > .nav-links > a {
     display: inline-block;
     padding: 25px 15px;
+    padding-left: 25px;
     text-decoration: none;
-    color: #fff;
+    color: var(--putih);
     font-size: 10pt;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: ease-in-out 0.3s;
 }
-
 .navbar > .nav-links > a:hover {
     transition: ease-in-out 0.5s;
     background-color: rgba(0, 0, 0, 0.3);
 }
-
 .navbar > #nav-check {
     display: none;
 }
-/* 
- *  Navbar Styling on mobile
-*/
-@media (max-width:800px) {
-    .navbar > .nav-btn {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
-    .navbar > .nav-btn > label {
-        display: inline-block;
-        width: 70px;
-        height: 70px;
-        padding: 24px;
-    }
-    .navbar > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-    .navbar > .nav-btn > label > span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 3px solid #eee;
-        border-radius: 1px;
-    }
-    .navbar > .nav-links {
-        position: absolute;
-        display: block;
-        width: 100%;
-        background-color: #333;
-        height: 0px;
-        transition: all 0.3s ease-in;
-        overflow-y: hidden;
-        top: 50px;
-        left: 0px;
-    }
-    .navbar > .nav-links > a {
-        display: block;
-        width: 100%;
-    }
-    .navbar > #nav-check:not(:checked) ~ .nav-links {
-        height: 0px;
-    }
-    .navbar > #nav-check:checked ~ .nav-links {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-    }
-    /* 
-     *  End of Navbar Styling on mobile
-    */
-}
-/* 
- *  End of Navbar Styling
-*/
+
 /* 
  *  Wrapper Styling
 */
@@ -229,7 +191,7 @@ svg {
 }
 .paper-background {
     margin-top: -1px;
-    border: 1px solid #eee;
+    border: 1px solid var(--hitam-border);
     background-image: url('../img/wh-block.png');
 }
 .wrapper.archive {
@@ -246,39 +208,8 @@ svg {
     margin: 20px;
 }
 
-@media only screen and (max-width:1024px) {
-    .wrapper {
-        width: calc(100% - 200px);
-    }
-    .wrapper.archive {
-        width: 100%;
-    }
-    .wrapper.archive > .content-box{
-        max-width: calc(100% / 2);
-    }
-    #header-1 {
-        background-size: calc(100% - 200px) !important;
-    }
-    #header-2 {
-        background-size: calc(100% - 200px) !important;
-    }
-}
-@media only screen and (max-width:800px) {
-    .wrapper {
-        width: 100%;
-    }
-    .wrapper.archive {
-        width: 100%;
-    }
-    .wrapper.archive > .content-box{
-        max-width: unset;
-    }
-}
 /* 
- *  End of Wrapper Styling
-*/
-/* 
- *  Header Styling
+ *  Feature and Header Styling
 */
 #header-1{
     background-image: url("../img/header-main.jpg");
@@ -287,6 +218,8 @@ svg {
     background-position-y: -17px;
     background-attachment: fixed;
     background-size: calc(100% - 500px);
+    background-color: #fff;
+
     width: 100%;
     height: 100vh;
     border: 1px solid var(--hitam-border);
@@ -313,7 +246,7 @@ svg {
     top: 85%;
 }
 .featured-post-item {
-    background-color: #fff;
+    background-color: var(--putih);
     position: relative;
     margin: 0 10px;
     height: 100px;
@@ -336,7 +269,6 @@ svg {
     width: 88%;
     cursor: pointer;
 }
-
 .featured-post-item > label > span {
     font-size: 18pt;
     font-weight: bold;
@@ -371,7 +303,6 @@ svg {
     animation-duration: 1.2s;
     content: "How to Combat Climate Change";
 }
-
 #post-title-1{
     color: #f25022;
 }
@@ -384,44 +315,7 @@ svg {
 #post-title-4{
     color: #ffb900;
 }
-@media only screen and (max-width: 800px) {
-    .featured-post-item {
-        margin: 5px;
-        width: 166px;
-    }
-    .featured-post-dock {
-        top: 65%;
-    }
-    #header-1{
-        background-image: url("../img/header-main-mobile.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-position-y: -17px;
-        background-attachment: fixed;
-        background-size: 100% !important;
-        width: 100%;
-        height: 100vh;
-        border: 1px solid var(--hitam-border);
-        border-radius: 10px;
-    }
-    #header-2 {
-        background-size: 100% !important;
-        margin: 0;
-        height: 32vh;
-    }
-}
-@media only screen and (max-width: 1208px) {
-    .featured-post-dock {
-        top: 68%;
-    }
-    .featured-post-item {
-        margin: 4px 37px;
-    }
 
-}
-/* 
- *  End of Header Styling
-*/
 /* 
  *  Container Styling
 */
@@ -430,32 +324,27 @@ svg {
     margin: 0 auto;
     padding: 46px;
 }
-
 .container-full {
     width: 100%;
     padding: 0;
     margin: 0 auto;
 }
-
 .container-main {
     display: -webkit-flex;
     display: flex;
 }
-
 .container-aside {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     padding: 15px;
 }
-
 .container-content {
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2;
     padding: 15px;
 }
-
 aside.container-aside{
     padding: 50px;
 }
@@ -465,7 +354,6 @@ aside.left-side {
 aside.right-side {
     padding-left: 0;
 }
-
 section.container-content {
     padding: 50px;
 }
@@ -476,18 +364,6 @@ section.right {
     padding-left: 20px;
 }
 
-@media (max-width: 800px) {
-    .container-main {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-    section.container-content {
-        padding: 19px;
-    }
-  }
-/* 
- *  End of Container Styling
-*/
 /* 
  *  Content Box Styling
 */
@@ -496,17 +372,16 @@ section.right {
     border-radius: 10px;
     padding: 30px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: var(--putih);
 }
 .content-box > h2 {
     margin: 0;
-    color:#ED7D31;
+    color: var(--oranye);
     margin-bottom: 20px;
     font-size: 10pt;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .link-item > [id^="link-check-"] {
     display: none;
 }
@@ -537,7 +412,7 @@ section.right {
     width: 100%;
     padding: 0 0 5px 0;
     margin: 0 0 5px 0;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid var(--abu-abu);
 }
 .link-item > [id^="link-check-"]:not(:checked) ~ .link-list {        
     height: 0px;
@@ -562,13 +437,13 @@ section.right {
     margin: 0 0 7px 0;
     font-size: 20pt;
     font-weight: bolder;
-    color:#444;
+    color: var(--hitam);
 }
 .post-title a {
-    color:#444;
+    color: var(--hitam);
 }
 .post-title a:hover {
-    color: #ED7D31;
+    color: var(--oranye);
 }
 .post-title > .timestamp-article {
     color: var(--hitam);
@@ -606,9 +481,6 @@ section.right {
     color: var(--hitam);
     font-weight: bold;
 }
-/* 
- *  End of Content Box Styling
-*/
 
 /*
 *   post page
@@ -620,7 +492,7 @@ section.right {
 .related-textbox > a > label {
     font-size: 12pt;
     font-weight: bold;
-    color: #444;
+    color: var(--hitam);
     line-height: 1.2em;
     cursor: pointer;
 }
@@ -628,7 +500,7 @@ section.right {
 .related-textbox a {
     font-size: 12pt;
     font-weight: bold;
-    color: #444;
+    color: var(--hitam);
     line-height: 1.2em;
     cursor: pointer;
     transition: ease-in-out 0.3s;
@@ -645,7 +517,7 @@ section.right {
     margin-top: 17px;
 }
 .comment-box > .button:hover {
-    background-color: #fff;
+    background-color: var(--putih);
 }
 .comment-box > .button:active {
     background-color: var(--hijau);
@@ -672,13 +544,12 @@ section.right {
     font-size: 12pt;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
+    color: var(--hitam);
+    background-color: var(--putih);
     background-clip: padding-box;
     border: 2.5px solid var(--hitam);
     border-radius: 5px;
 }
-
 .button {
     display: inline-block;
     padding: 6px 12px;
@@ -692,13 +563,11 @@ section.right {
     border-radius: 5px;
     cursor: pointer;
 }
-
 a.button:hover{
     transition: ease-in-out 0.3s;
     color: var(--hitam);
-    background-color: #fff;
+    background-color: var(--putih);
 }
-
 .btn-subscribe {
     box-sizing: border-box;
     position: relative;
@@ -715,12 +584,10 @@ a.button:hover{
     position: relative;
     bottom: -1.9px;
 }
-
 .btn-orange {
     transition: ease-in-out 0.3s;
     background-color: var(--oranye);
 }
-
 .input-group {
     position: relative;
     display: -ms-flexbox;
@@ -784,50 +651,44 @@ a.button:hover{
     width: 12pt;
     height: 12pt;
 }
+
 /* 
  *  footer Styling
 */
 .footer-landingpage {
-    background-color: var(--biru-tua);
+    background-color: var(--hitam-footer);
     text-align: center;
     /* border-top: 3px solid var(--hitam); */
 }   
-
 footer label {
     font-size: 14pt;
-    color: #fff;
+    color: var(--putih);
 }
-
 footer .newsletter {
     height: 30vh;
 }
-
 footer .subscription {
     display: block;
     position: relative;
     top: 20%;
 }
-
 .subscription input {
     display: inline;
     width: unset;
 }
-
 .email-subscribe {
     min-width: 250px;
 }
-
 footer .subscription-box {
     margin-top: 20px;
 }
-
 footer .copyright {
     padding: 5px 0px;
     font-size: 6pt;
     bottom: 0;
     position: relative;
-    border-top: 1px solid #888;
-    background-color: #fff;
+    border-top: 1px solid var(--hitam-border);
+    background-color: var(--putih);
     text-align: center;
     letter-spacing: 1px;
 }
@@ -839,17 +700,6 @@ footer .copyright {
     position: relative;
     bottom: -0.9px;
 }
-
-@media only screen and (min-width:1024px) {
-    .email-subscribe {    
-        min-width: 380px;
-    }
-}
-/* 
- *  end of footer Styling
-*/
-
-
 /*
 *   about us page
 */
@@ -872,7 +722,6 @@ footer .copyright {
 .profile-name {
     margin: 0;
 }
-
 
 /*
 *   mascot styling 
@@ -897,9 +746,201 @@ footer .copyright {
     height: 230px;
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width:1280px){
+    /* 
+    *  wrapper Styling on mobile
+    */
+    .wrapper {
+        width: calc(100% - 200px);
+    }
+    #header-1, #header-2 {
+        background-size: calc(100% - 200px);
+    }
+    .featured-post-dock {
+        top: 55%;
+    }
+    .featured-post-item {
+        flex: 30%;
+        margin: 0px 20px 26px 20px;
+    }
+}
+
+@media only screen and (max-width:1152px) {
+    /* 
+    *  wrapper Styling on mobile
+    */
+    .wrapper {
+        width: calc(100% - 120px);
+    }
+    .wrapper.archive {
+        width: 100%;
+        padding: 30px;
+        padding-top: 90px;
+    }
+    .wrapper.archive > .content-box{
+        max-width: calc(100% / 2);
+        flex: 25%;
+    }
+    #header-1, #header-2 {
+        background-size: calc(100% - 120px);
+    }
+    /* 
+    *  footer Styling on mobile
+    */
+    .email-subscribe {    
+        min-width: 380px;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    /*
+    *   feature and header styling on mobile
+    */
+    .featured-post-dock{
+        top: calc(100% - 365px);
+    }
+}
+
+@media only screen and (max-width:800px) {
+    /* 
+    *  wrapper Styling on mobile
+    */
+    .wrapper {
+        width: 100%;
+    }
+    .wrapper.archive {
+        width: 100%;
+    }
+    .wrapper.archive > .content-box{
+        max-width: unset;
+        flex: 50%;
+    }
+
+    /* 
+    *  Navbar Styling on mobile
+    */
+    .navbar > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70px;
+        height: 70px;
+    }
+    .navbar > .nav-btn:hover {
+        transition: ease-in-out 0.5s;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar > .nav-btn:active {
+        transition: ease-in-out 0.5s;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar > .nav-btn > label {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        padding: 19px;
+    }
+    .navbar > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar > .nav-btn > label > span {
+        display: block;
+        border: 0;
+        border-top: 3px solid var(--abu-abu-nav-btn);
+        margin: 6px 0;
+        padding: 0;
+        width: 32px;
+    }
+    .navbar > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        color: var(--hitam);
+        background-color: var(--putih-background);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        left: 0;
+    }
+    .navbar > .nav-links > a {
+        display: block;
+        width: 100%;
+        color: var(--hitam);
+    }
+    .navbar > .nav-links > a:hover {
+        color: var(--hitam);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar > .nav-links > a:active {
+        color: var(--hitam);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .navbar > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .navbar > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    /*
+    *   feature and header styling on mobile
+    */
+    .featured-post-dock {
+        top: 65%;
+    }
+    #header-1{
+        background-image: url("../img/header-main-mobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: 69px;
+        background-attachment: fixed;
+        background-size: 100% !important;
+        width: 100%;
+        height: 100vh;
+        border: 1px solid var(--hitam-border);
+        border-radius: 10px;
+    }
+    #header-2 {
+        background-size: 100% !important;
+        margin: 0;
+        height: 32vh;
+    }
+
+    /*
+    *   container styling on mobile
+    */
+    .container-main {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    section.container-content {
+        padding: 19px;
+    }
+    aside.container-aside {
+        padding: 19px;
+        padding-bottom: 20px;
+    }
+
+    /* 
+    *  mascot Styling on mobile
+    */
     .floating-mascot {
         display: none;
     }
+}
+
+@media only screen and (max-width: 414px) {
+    .email-subscribe {
+        min-width: unset;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .featured-post-item{
+        margin: 0px 12px 26px 12px;
+    }
+
 }
 
