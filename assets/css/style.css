@@ -1021,6 +1021,11 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
+#toggle:checked~.theme-container .post-title a:hover {
+    color: var(--oranye) !important;
+    transition: 0.2s ease-in-out;
+}
+
 #toggle:checked~.theme-container .post-title a,
 #toggle:checked~.theme-container .post-title h1 {
     color: #e1e1e1;
