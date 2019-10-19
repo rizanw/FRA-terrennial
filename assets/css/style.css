@@ -912,22 +912,6 @@ footer .copyright {
     }
 }
 
-/* #toggle-bar::before{
-    content: 'Light';
-    position: absolute;
-    left: -62px;
-    top: -1px;
-    font-size: 1.8em;
-    color: #749DD6;
-}
-#toggle-bar::after{
-    content: 'Dark';
-    position: absolute;
-    font-size: 1.8em;
-    top: -1px;
-    right: -57px;
-    color: #32312F;
-} */
 #label {
     display: inline-block;
     background: #fff;
@@ -1016,10 +1000,8 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked~.theme-container #header-1,
-#header-2 {
+#toggle:checked~.theme-container #header-1{
     background-color: #32312F;
-    /*#3B3A39*/
     transition: 0.2s ease-in-out;
 }
 
@@ -1188,11 +1170,6 @@ footer .copyright {
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    .navbar>.nav-btn:active {
-        transition: ease-in-out 0.5s;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-
     .navbar>.nav-btn>label {
         display: inline-block;
         width: 70px;
@@ -1276,14 +1253,14 @@ footer .copyright {
     *   feature and header styling on mobile
     */
     .featured-post-dock {
-        top: 65%;
+        top: 55%;
     }
 
     #header-1 {
         background-image: url("../img/header-main-mobile.jpg");
         background-repeat: no-repeat;
         background-position: center;
-        background-position-y: 69px;
+        background-position-y: 40px;
         background-attachment: fixed;
         background-size: 100% !important;
         width: 100%;
