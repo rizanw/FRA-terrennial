@@ -1017,7 +1017,7 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container svg {
-    fill: #fff;
+    fill: #b6b6b6;
     transition: 0.2s ease-in-out;
 }
 
