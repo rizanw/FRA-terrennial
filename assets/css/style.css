@@ -994,6 +994,12 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
+#toggle:checked~.theme-container .comment-box > .button:hover {
+    background-color: #201f1e;
+    color: #e1e1e1;
+    transition: 0.2s ease-in-out;
+}
+
 #toggle:checked~.theme-container svg {
     fill: #b6b6b6;
     transition: 0.2s ease-in-out;
