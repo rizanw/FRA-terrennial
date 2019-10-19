@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,57 +10,92 @@
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-<!-- 
-    Navbar 
--->
+    <!-- theme swithcer -->
+    <input id="toggle" type="checkbox" />
+    <div id="toggle-bar">
+        <label id="label" for="toggle">
+            <span id="switch"></span>
+        </label>
+    </div>
+    <!-- Navbar -->
     <nav class="navbar">
         <input type="checkbox" id="nav-check">
         <div class="nav-header">
             <div class="nav-title">
-                <a href="" class="terrenial-logo">
-                    <img src="assets/img/favicon.ico" style="width: 14pt; display: inline; position: relative; bottom: -2.9px;">
+                <a href="#" class="terrenial-logo">
+                    <img src="assets/img/favicon.ico"
+                        style="width: 14pt; display: inline; position: relative; bottom: -2.9px;">
                     terrennial
                 </a>
             </div>
         </div>
         <div class="nav-btn">
             <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
+                <svg id="svg-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 53">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #231f20;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-width: 3px;
+                            }
+                        </style>
+                    </defs>
+                    <title>iconAsset 2</title>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <line class="cls-1" x1="1.5" y1="51.5" x2="51.5" y2="1.5" />
+                            <line class="cls-1" x1="1.5" y1="1.5" x2="51.5" y2="51.5" />
+                        </g>
+                    </g>
+                </svg>
+                <svg id="svg-burger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.72 53.16">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #fff;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-width: 3.16px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <line class="cls-1" x1="1.58" y1="1.58" x2="95.14" y2="1.58" />
+                            <line class="cls-1" x1="1.58" y1="51.58" x2="95.14" y2="51.58" />
+                            <line class="cls-1" x1="1.58" y1="26.18" x2="95.14" y2="26.18" />
+                        </g>
+                    </g>
+                </svg>
             </label>
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="archive.html">Archive</a>
-            <a href="#">About Us</a>
+            <a href="about-us.html">About Us</a>
         </div>
     </nav>
-<!-- 
-    End of Navbar 
---> 
-<!-- 
-    Wrapper
--->
-    <div class="wrapper paper-background">     
-<!-- 
-    Header
--->
-        <div id="header-2" class="container container-full">
-        </div>
-<!-- 
-    End of Header
--->
-<!-- 
-    Main content
--->
-        <div class="container-main">
-            <section class="container-content left">
+    <!-- End of Navbar  -->
+    <div class="theme-container">
+        <!-- Wrapper -->
+        <div class="wrapper paper-background">
+            <!-- Header -->
+            <div id="header-2" class="container container-full">
+            </div>
+            <!--  End of Header -->
+            <!--   Main content -->
+            <div class="container-main">
+                <section class="container-content left">
                     <div class="content-box post">
                         <div class="post-title">
                             <h1>About Us</h1>
-                         </div>
+                        </div>
                         <div class="container-main profile">
                             <div class="container-aside">
                                 <img class="profile-image" src="assets/img/icons200-2.png">
@@ -67,118 +103,136 @@
                             <div class="container-content">
                                 <h2 class="profile-name">Alifa Rizki Rahmarani</h2>
                                 <p>
-                                    Hello! I'm Alifa, currently studying Information Systems at a public university in Indonesia. 
-                                    I love visually bringing ideas to life and would like to have a related work one day. 
+                                    Hello! I'm Alifa, currently studying Information Systems at a public university in
+                                    Indonesia.
+                                    I love visually bringing ideas to life and would like to have a related work one
+                                    day.
                                 </p>
                                 <p>
-                                    <img style="width: auto" src="assets/img/at.svg" height="16"> 
-                                    <a style="color: #444" href="mailto:alifa.rahmarani@gmail.com" target="_blank">alifa.rahmarani@gmail.com</a><br>
-                                    <img style="width: auto" src="assets/img/linkedin.svg" height="16"> 
-                                    <a style="color: #444" href="https://www.linkedin.com/in/rahmarani/" target="_blank">Alifa Rizki Rahmarani</a><br>
+                                    <svg height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z" />
+                                    </svg>
+                                    <a href="mailto:alifa.rahmarani@gmail.com"
+                                        target="_blank">alifa.rahmarani@gmail.com</a><br>
+                                    <svg height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path
+                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                    </svg>
+                                    <a href="https://www.linkedin.com/in/rahmarani/" target="_blank">Alifa Rizki
+                                        Rahmarani</a><br>
                                 </p>
                             </div>
                         </div>
                         <div class="container-main profile">
                             <div class="container-aside">
-                                    <img class="profile-image" src="assets/img/icons200-1.png">
-                                </div>
+                                <img class="profile-image" src="assets/img/icons200-1.png">
+                            </div>
                             <div class="container-content">
                                 <h2 class="profile-name">Rizky Andre Wibisono</h2>
                                 <p>
-                                    Hi there! I'm Andre, learning and problem-solving has been my 7am-7pm hobby. 
-                                    Informatics is my studies, teach me fundamental of thinking, and it helps me and others to get a wonderful life. 
-                                    On this field, I also interest in smart devices, data analytics, artificial intelligence, mobile apps, and UI/UX. 
+                                    Hi there! I'm Andre, learning and problem-solving has been my 7am-7pm hobby.
+                                    Informatics is my studies, teach me fundamental of thinking, and it helps me and
+                                    others
+                                    to get a wonderful life.
+                                    On this field, I also interest in smart devices, data analytics, artificial
+                                    intelligence, mobile apps, and UI/UX.
                                 </p>
                                 <p>
-                                    <img style="width: auto" src="assets/img/at.svg" height="16"> 
-                                    <a style="color: #444" href="mailto:rzkandre@gmail.com" target="_blank">rzkandre@gmail.com</a> <br>
-                                    <img style="width: auto" src="assets/img/linkedin.svg" height="16"> 
-                                    <a style="color: #444" href="https://www.linkedin.com/in/rizan-wibisono/" target="_blank">Rizky Andre Wibisono</a><br>
+                                    <svg height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M256 8C118.941 8 8 118.919 8 256c0 137.059 110.919 248 248 248 48.154 0 95.342-14.14 135.408-40.223 12.005-7.815 14.625-24.288 5.552-35.372l-10.177-12.433c-7.671-9.371-21.179-11.667-31.373-5.129C325.92 429.757 291.314 440 256 440c-101.458 0-184-82.542-184-184S154.542 72 256 72c100.139 0 184 57.619 184 160 0 38.786-21.093 79.742-58.17 83.693-17.349-.454-16.91-12.857-13.476-30.024l23.433-121.11C394.653 149.75 383.308 136 368.225 136h-44.981a13.518 13.518 0 0 0-13.432 11.993l-.01.092c-14.697-17.901-40.448-21.775-59.971-21.775-74.58 0-137.831 62.234-137.831 151.46 0 65.303 36.785 105.87 96 105.87 26.984 0 57.369-15.637 74.991-38.333 9.522 34.104 40.613 34.103 70.71 34.103C462.609 379.41 504 307.798 504 232 504 95.653 394.023 8 256 8zm-21.68 304.43c-22.249 0-36.07-15.623-36.07-40.771 0-44.993 30.779-72.729 58.63-72.729 22.292 0 35.601 15.241 35.601 40.77 0 45.061-33.875 72.73-58.161 72.73z" />
+                                    </svg>
+                                    <a href="mailto:rzkandre@gmail.com" target="_blank">rzkandre@gmail.com</a> <br>
+                                    <svg height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path
+                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                    </svg>
+                                    <a href="https://www.linkedin.com/in/rizan-wibisono/" target="_blank">Rizky Andre
+                                        Wibisono</a><br>
                                 </p>
                             </div>
                         </div>
                     </div>
-            </section>
-            <aside class="container-aside right-side">
-                <div class="content-box">
-                    <h2>Search</h2>
-                    <div class="input-group">     
-                        <input type="text" class="form-control" placeholder="enter keyword..." style="font-size: 9pt">
-                        <div class="input-group-append">
-                            <span>                            
-                                <svg id="search-icon" class="search-icon" viewBox="0 0 24 24">
-                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-                                    <path d="M0 0h24v24H0z" fill="none"/>
-                                </svg>
-                            </span>
+                </section>
+                <aside class="container-aside right-side">
+                    <div class="content-box">
+                        <h2>Search</h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter keyword..."
+                                style="font-size: 9pt">
+                            <div class="input-group-append">
+                                <span>
+                                    <svg id="search-icon" class="search-icon" viewBox="0 0 24 24">
+                                        <path
+                                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="content-box">
-                    <h2>External Links</h2>
-                    <div class="link-item">
-                        <input type="checkbox" id="link-check-1"> 
-                        <div class="link-btn">
-                            <label for="link-check-1">
-                                <img class="asean-ico" src="assets/img/asean-ico.png" alt="asean logo">
-                                ASEAN</label>
+                    <div class="content-box">
+                        <h2>External Links</h2>
+                        <div class="link-item">
+                            <input type="checkbox" id="link-check-1">
+                            <div class="link-btn">
+                                <label for="link-check-1">
+                                    <img class="asean-ico" src="assets/img/asean-ico.png" alt="asean logo">
+                                    ASEAN</label>
+                            </div>
+                            <div class="link-list">
+                                <a href="https://environment.asean.org/awgcc/" target="_blank">
+                                    ASEAN Cooperation on Climate Change</a>
+                                <a href="https://environment.asean.org/awgwrm/" target="_blank">
+                                    ASEAN Cooperation on Water Resource</a>
+                                <a href="https://asean.org/asean-joins-movement-beat-plastic-pollution/"
+                                    target="_blank">
+                                    ASEAN joins movement to beat plastic pollution</a>
+                                <a href="https://www.futurereadyasean.org/" target="_blank">
+                                    ASEAN Cooperation on Environment</a>
+                                <a href="https://aseanbiodiversity.org/" target="_blank">
+                                    ASEAN Centre for Biodiversity</a>
+                            </div>
                         </div>
-                        <div class="link-list">
-                            <a href="https://environment.asean.org/awgcc/" target="_blank">
-                                ASEAN Cooperation on Climate Change</a>
-                            <a href="https://environment.asean.org/awgwrm/" target="_blank">
-                                ASEAN Cooperation on Water Resource</a>
-                            <a href="https://asean.org/asean-joins-movement-beat-plastic-pollution/" target="_blank">
-                                ASEAN joins movement to beat plastic pollution</a>
-                            <a href="https://www.futurereadyasean.org/" target="_blank">
-                                ASEAN Cooperation on Environment</a>
-                            <a href="https://aseanbiodiversity.org/" target="_blank">
-                                ASEAN Centre for Biodiversity</a>
+                        <div class="link-item">
+                            <input type="checkbox" id="link-check-2">
+                            <div class="link-btn">
+                                <label for="link-check-2">
+                                    <img class="unesco-ico" src="assets/img/unesco-ico.png" alt="unesco logo">
+                                    UNESCO</label>
+                            </div>
+                            <div class="link-list">
+                                <a href="https://whc.unesco.org/en/climatechange/" target="_blank">
+                                    UNESCO Climate Change and World Heritage</a>
+                                <a href="https://en.unesco.org/themes/addressing-climate-change/climate-change-education-and-awareness"
+                                    target="_blank">
+                                    UNESCO Climate Change Education and Awareness</a>
+                                <a href="http://www.unesco.org/new/en/natural-sciences/ioc-oceans/focus-areas/rio-20-ocean/blueprint-for-the-future-we-want/marine-pollution/"
+                                    target="_blank">
+                                    UNESCO - Marine Pollution</a>
+                                <a href="https://theplasticinitiative.org/" target="_blank">
+                                    UNESCO - The Plastic Initiative</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="link-item">
-                        <input type="checkbox" id="link-check-2"> 
-                        <div class="link-btn">
-                            <label for="link-check-2">
-                                <img class="unesco-ico" src="assets/img/unesco-ico.png" alt="unesco logo">
-                                UNESCO</label>
-                        </div>
-                        <div class="link-list">
-                            <a href="https://whc.unesco.org/en/climatechange/" target="_blank">
-                                UNESCO Climate Change and World Heritage</a>
-                            <a href="https://en.unesco.org/themes/addressing-climate-change/climate-change-education-and-awareness" target="_blank">
-                                UNESCO Climate Change Education and Awareness</a>
-                            <a href="http://www.unesco.org/new/en/natural-sciences/ioc-oceans/focus-areas/rio-20-ocean/blueprint-for-the-future-we-want/marine-pollution/" target="_blank">
-                                UNESCO - Marine Pollution</a>
-                            <a href="https://theplasticinitiative.org/" target="_blank">
-                                UNESCO - The Plastic Initiative</a>
-                        
-                        </div>
-                    </div>
-                </div>
-            </aside>
+                </aside>
+            </div>
+            <!--  End of main content -->
         </div>
-<!-- 
-    End of main content
--->
+        <!--  End of Wrapper -->
+        <a class="floating-mascot" href="posts/post12-giveway.html" title="Join our giveaway!">
+            <div></div>
+        </a>
+        <!--  Footer -->
+        <footer>
+            <div class="copyright">
+                <img src="assets/img/copyright.svg" class="copyright-icon">
+                2019
+            </div>
+        </footer>
+        <!--  End of Footer -->
     </div>
-<!-- 
-    End of Wrapper
--->
-<a class="floating-mascot" href="posts/post12-giveway.html" title="Join our giveaway!">
-    <div></div>
-</a>
-<!-- 
-    Footer
--->
-    <footer>
-        <div class="copyright">
-            <img src="assets/img/copyright.svg" class="copyright-icon">
-            2019
-        </div>
-    </footer> 
-<!-- 
-    End of Footer
--->
 </body>
+
 </html>
