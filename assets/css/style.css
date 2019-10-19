@@ -12,7 +12,7 @@
     --hijau: #76be45;
     --oranye: #ED7D31;
     --kuning: #FFC000;
-    --oranye-nav: #FB9C60;
+    --oranye-nav: #f39f47;
     --hitam: #444;
     --hitam-placeholder: #777;
     --hitam-border: #888;
@@ -1041,15 +1041,19 @@ footer .copyright {
     background-color: var(--putih-background);
 }
 
-#toggle:checked ~ .theme-container {
-    background-color: #32312F; /*#3B3A39*/
+#toggle:checked ~ .navbar {
+    background-color: #cc7232; /*#3B3A39*/
 }
-#toggle:checked ~ .theme-container .button, a.button:hover{
-    /* background-color: #32312F; */
-    color: #fff;
+#toggle:checked ~ .theme-container {
+    background-color: #201f1e; /*#3B3A39*/
+}
+#toggle:checked ~ .theme-container .button a.button:hover{
+    background-color: #c16b2e;
+    color: #e1e1e1;
 }
 #toggle:checked ~ .theme-container a.button:hover{
-    background-color: #000;
+    background-color: #252423;
+    color:#e1e1e1;
 }
 #toggle:checked ~ .theme-container svg{
     fill: white;
@@ -1064,24 +1068,28 @@ footer .copyright {
 }
 
 #toggle:checked ~ .theme-container .content-box{
-    background-color: #3B3A39;
-    color: #fff;
+    background-color: #252423;
+    color: #e1e1e1;
 }
 
 
 
 #toggle:checked ~ .theme-container .post-title a {
-    color: #fff;
+    color: #e1e1e1;
+}
+#toggle:checked ~ .theme-container .post-title > .timestamp-article {
+    color: #e1e1e1;
+    opacity:0.7;
 }
 #toggle:checked ~ .theme-container .post-title a:hover{
     color: var(--oranye);
 }
 #toggle:checked ~ .theme-container .link-list a:hover{
-    color: #fff;
+    color: #e1e1e1;
 }
 #toggle:checked ~ .theme-container .form-control{
-    background-color: #0E0E0E;
-    color: #fff;
+    background-color: #201f1e;
+    color: #e1e1e1;
 }
 #toggle:checked ~ .theme-container .form-control::placeholder{
     color: unset;
@@ -1089,10 +1097,10 @@ footer .copyright {
 
 
 #toggle:checked ~ .theme-container .footer-landingpage{
-    background-color: #3B3A38;
+    background-color: #2f2e2d;
 }
 
 #toggle:checked ~ .theme-container .footer-landingpage .copyright{
-    background-color: #0E0E0E;
-    color: #fff;
+    background-color: #201f1e;
+    color: #e1e1e1;
 }
