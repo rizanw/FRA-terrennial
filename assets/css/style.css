@@ -4,9 +4,6 @@
  *  Variable declaration
 */
 :root {
-    /* 
-    * light mode
-    */
     --biru-tua: #4472C4;
     --biru-muda: #5B9BD5;
     --hijau: #76be45;
@@ -21,10 +18,6 @@
     --abu-abu-nav-btn: #eee;
     --putih: #fff;
     --putih-background: #f9f9f9;
-    /* 
-    * light mode
-    */
-
 }
 
 /* 
@@ -36,8 +29,8 @@
 
 body,
 html {
-    font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Karla' !important;
+    font-family: 'Karla', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 10pt;
     font-weight: 400;
     line-height: 1.15;
@@ -492,6 +485,7 @@ section.right {
     border-bottom: 2px solid var(--hitam);
     letter-spacing: 1px;
 }
+
 .link-item>.link-btn>label:hover {
     color: var(--oranye);
     transition: 0.2s linear;
@@ -996,7 +990,7 @@ footer .copyright {
 
 #toggle:checked~.theme-container a.button:hover {
     background-color: #201f1e;
-    color:#e1e1e1;
+    color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
 
@@ -1005,7 +999,7 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked~.theme-container #header-1{
+#toggle:checked~.theme-container #header-1 {
     background-color: #32312F;
     transition: 0.2s ease-in-out;
 }
@@ -1022,19 +1016,22 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked~ .theme-container a:hover {
+#toggle:checked~.theme-container a:hover {
     color: #e1e1e1 !important;
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked~ .theme-container .post-title a, #toggle:checked~ .theme-container .post-title h1 {
+#toggle:checked~.theme-container .post-title a,
+#toggle:checked~.theme-container .post-title h1 {
     color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
+
 #toggle:checked~.theme-container .content-box label {
     color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
+
 #toggle:checked~.theme-container .content-box label:hover {
     color: var(--oranye);
     transition: 0.2s ease-in-out;
@@ -1056,19 +1053,20 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked ~ .theme-container .form-control::placeholder {
+#toggle:checked~.theme-container .form-control::placeholder {
     color: unset;
     transition: 0.2s ease-in-out;
 }
 
 
-#toggle:checked ~ .theme-container .footer-landingpage {
+#toggle:checked~.theme-container .footer-landingpage {
     background-color: #323232;
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked ~ .theme-container .copyright {
-    background-color: #201F1E;;
+#toggle:checked~.theme-container .copyright {
+    background-color: #201F1E;
+    ;
     color: #fff;
     transition: 0.2s ease-in-out;
 }
