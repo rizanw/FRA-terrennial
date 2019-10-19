@@ -1000,7 +1000,7 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container .button,
-a.button:hover {
+#toggle:checked~.theme-container a.button:hover {
     /* background-color: #32312F; */
     color: #fff;
     transition: 0.2s ease-in-out;
@@ -1069,18 +1069,18 @@ a.button:hover {
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked~.theme-container .form-control::placeholder {
+#toggle:checked ~ .theme-container .form-control::placeholder {
     color: unset;
     transition: 0.2s ease-in-out;
 }
 
 
-#toggle:checked~.theme-container .footer-landingpage {
+#toggle:checked ~ .theme-container .footer-landingpage {
     background-color: #3B3A38;
     transition: 0.2s ease-in-out;
 }
 
-#toggle:checked~.theme-container .footer-landingpage .copyright {
+#toggle:checked ~ .theme-container .copyright {
     background-color: #0E0E0E;
     color: #fff;
     transition: 0.2s ease-in-out;
