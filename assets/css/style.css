@@ -197,7 +197,7 @@ svg {
 
 .navbar>.nav-links>a {
     display: inline-block;
-    padding: 25px 15px;
+    padding: 25px 27px;
     text-decoration: none;
     color: var(--putih);
     font-size: 10pt;
@@ -266,7 +266,7 @@ svg {
     background-image: url("../img/header-small.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: calc(68px);
+    /*background-position-y: calc(18px);*/
     background-attachment: fixed;
     background-size: calc(100% - 500px);
     width: 100%;
@@ -491,6 +491,10 @@ section.right {
     padding: 0 0 5px 0;
     border-bottom: 2px solid var(--hitam);
     letter-spacing: 1px;
+}
+.link-item>.link-btn>label:hover {
+    color: var(--oranye);
+    transition: 0.2s linear;
 }
 
 .link-item>.link-list {
@@ -994,7 +998,7 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container {
-    background-color: #32312F;
+    background-color: #201f1e;
     /*#3B3A39*/
     transition: 0.2s ease-in-out;
 }
@@ -1007,12 +1011,13 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container a.button:hover {
-    background-color: #000;
+    background-color: #201f1e;
+    color:#e1e1e1;
     transition: 0.2s ease-in-out;
 }
 
 #toggle:checked~.theme-container svg {
-    fill: white;
+    fill: #fff;
     transition: 0.2s ease-in-out;
 }
 
@@ -1030,22 +1035,22 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container .content-box {
-    background-color: #3B3A39;
-    color: var(--putih);
+    background-color: #2a2a2a;
+    color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
 
 #toggle:checked~ .theme-container a:hover {
-    color: var(--putih) !important;
+    color: #e1e1e1 !important;
     transition: 0.2s ease-in-out;
 }
 
 #toggle:checked~ .theme-container .post-title a, #toggle:checked~ .theme-container .post-title h1 {
-    color: var(--putih);
+    color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
 #toggle:checked~.theme-container .content-box label {
-    color: var(--putih);
+    color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
 #toggle:checked~.theme-container .content-box label:hover {
@@ -1059,13 +1064,13 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container .link-list a:hover {
-    color: var(--putih);
+    color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
 
 #toggle:checked~.theme-container .form-control {
-    background-color: #0E0E0E;
-    color: #fff;
+    background-color: #201f1e;
+    color: #e1e1e1;
     transition: 0.2s ease-in-out;
 }
 
@@ -1076,12 +1081,12 @@ footer .copyright {
 
 
 #toggle:checked ~ .theme-container .footer-landingpage {
-    background-color: #3B3A38;
+    background-color: #323232;
     transition: 0.2s ease-in-out;
 }
 
 #toggle:checked ~ .theme-container .copyright {
-    background-color: #0E0E0E;
+    background-color: #201F1E;;
     color: #fff;
     transition: 0.2s ease-in-out;
 }
