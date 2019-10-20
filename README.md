@@ -10,4 +10,4 @@ Credit :
 - [Rizky](https://github.com/rizanw)
 
 Note :  
-actually we are also trying to implementing javascript on our code to make the darkmode running without duplicating HTML file, just like based on Digital Citizen Course. But it is forbidden to include javascript (HTML and CSS only are allowed). So we store it [here](https://github.com/rizanw). 
+actually we are also trying to implementing javascript on our code to make the darkmode running without duplicating HTML file, just like based on Digital Citizen Course. But it is forbidden to include javascript (HTML and CSS only are allowed). So we store it [here](https://github.com/rizanw/FRA-terrennial/tree/new-theme-js). 
