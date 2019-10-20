@@ -985,7 +985,12 @@ footer .copyright {
 }
 
 #toggle:checked~.theme-container #header-1 {
-    background-image: url('../img/header-main-dark.jpg');
+    background-image: url('../img/header-main-sq-dk.jpg');
+    transition: 0.3s ease-in;
+}
+
+#toggle:checked~.theme-container #header-2 {
+    background-image: url('../img/header-small-dk.jpg');
     transition: 0.3s ease-in;
 }
 
@@ -1344,7 +1349,7 @@ footer .copyright {
     }
 
     #toggle:checked~.theme-container #header-1 {
-        background-image: url('../img/header-main-mobile-dark.jpg');
+        background-image: url('../img/header-main-mobile-dk.jpg');
         transition: 0.3s ease-in;
     }
 }
