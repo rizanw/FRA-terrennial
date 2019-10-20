@@ -1098,14 +1098,7 @@ footer .copyright {
     transition: 0.2s ease-in-out;
 }
 
-/* dark mode controller */
-#toggle:checked~.navbar .is-lightmode, 
-#toggle:checked~.theme-container .is-lightmode {
-    display: none !important;
-}
-
-#toggle:not(:checked)~.navbar .is-darkmode,
-#toggle:not(:checked)~.theme-container .is-darkmode {
+.is-darkmode {
     display: none !important;
 }
 
