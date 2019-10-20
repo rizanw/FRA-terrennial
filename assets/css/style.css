@@ -630,6 +630,7 @@ section.right {
 }
 
 .comment-box>.button {
+    -webkit-appearance: none;
     font-size: 9pt !important;
     margin-top: 17px;
 }
