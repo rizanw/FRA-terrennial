@@ -5,6 +5,8 @@ a front-end web development (fully CSS and HTML only) to join [FutureReady ASEAN
 Blog Description:
 Welcome to our blog, terrennial. We at terrennial are trying to further spread awareness about our changing climate and some sustainable solution for that. Wrapped in a way of interesting, fresh visuals, terrennial is an experience you will make sure not to miss. Don't forget to tell your friends! 
 
+Demo / Preview : [terrennial](https://terrennial.rzndwb.com/)
+
 Credit :
 - [Alifa](https://github.com/alifarzki) 
 - [Rizky](https://github.com/rizanw)
